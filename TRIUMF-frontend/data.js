@@ -57,7 +57,7 @@ function mapData(data) {
   for (const [key, value] of Object.entries(data['readPvDict'])) {
     const row = document.createElement('tr');
     const tableCell1 = document.createElement('td');
-    const tableCell2 = document.createElement('rd');
+    const tableCell2 = document.createElement('td');
     tableCell1.textContent += key;
     tableCell2.textContent += value;
     tableBody.appendChild(row);
