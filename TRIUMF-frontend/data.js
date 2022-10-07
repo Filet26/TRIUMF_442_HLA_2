@@ -1,4 +1,4 @@
-async function fetchData() {
+function fetchData() {
   const data = {
     readPvDict: {
       'ALGA:RDGAINA': '"51.0"',
@@ -51,4 +51,11 @@ async function fetchData() {
   console.log(data);
   return data;
 }
-fetchData();
+
+function mapData(data) {
+  for (const item of data['readPvDict']) {
+    console.log(item);
+  }
+}
+
+mapData(fetchData());
