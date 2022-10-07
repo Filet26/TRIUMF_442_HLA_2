@@ -53,8 +53,8 @@ function fetchData() {
 }
 
 function mapData(data) {
-  for (const item in data['readPvDict']) {
-    console.log(item);
+  for (const [key, value] of Object.entries(data['readPvDict'])) {
+    console.log(value);
   }
 }
 
