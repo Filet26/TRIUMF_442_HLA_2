@@ -53,8 +53,16 @@ function fetchData() {
 }
 
 function mapData(data) {
+  const tableBody = document.querySelector('tbody');
   for (const [key, value] of Object.entries(data['readPvDict'])) {
-    console.log(value);
+    const row = document.createElement('tr');
+    const tableCell1 = document.createElement('td');
+    const tableCell2 = document.createElement('rd');
+    tableCell1.textContent += key;
+    tableCell2.textContent += value;
+    tableBody.appendChild(row);
+    row.appendChild(tableCell1);
+    row.appendChild(tableCell2);
   }
 }
 
