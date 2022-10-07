@@ -19,4 +19,8 @@ fetch("https://beta.hla.triumf.ca/jaya/get", {
   mode: "cors",
 })
   .then((response) => response.json())
-  .then((data) => console.log(data));
+  .then((data) => console.log(data))
+  .then((data) => {
+    let data_container = document.getElementById("data");
+    console.log(data_container);
+  });
