@@ -1,28 +1,26 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: #0050fa;
+  background-color: #009fdf;
 }
 
-img.logo{
-  height:150px;
+img.logo {
+  height: 150px;
 }
 
-
-img.graph{
+img.graph {
   width: 400px;
 }
-main{
+main {
   display: flex;
   flex-direction: row;
-  
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   justify-content: space-between;
 }
 a {
