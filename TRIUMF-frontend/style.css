@@ -1,7 +1,26 @@
 body {
   display: flex;
+  flex-direction: column;
+  background-color: #0050fa;
+}
+
+img.logo{
+  height:150px;
+}
+
+img.graph{
+  width: 400px;
+}
+main{
+  display: flex;
   flex-direction: row;
-  background-color: black;
+  
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
