@@ -49,20 +49,29 @@ function fetchData() {
     timestamp: '2022-10-07 11:36:01'
   };
   console.log(data);
-  return data;
+
+  return data
 }
 
 function mapData(data) {
+  const listPVDict = Object.entries(data.readPvDict)
+  const listUnitsDict = Object.entries(data.readUnitsDict)
+  console.log(listPVDict)
+  console.log(listUnitsDict)
   const tableBody = document.querySelector('tbody');
-  for (const [key, value] of Object.entries(data['readPvDict'])) {
+  for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
-    const tableCell1 = document.createElement('td');
-    const tableCell2 = document.createElement('td');
-    tableCell1.textContent += key;
-    tableCell2.textContent += value;
     tableBody.appendChild(row);
-    row.appendChild(tableCell1);
-    row.appendChild(tableCell2);
+    for (const property of value){
+      const tableCell = document.createElement('td')
+      tableCell.textContent += property
+      row.appendChild(tableCell);
+    }
+    for (const units of listUnitsDict[index]){
+      const tableCell = document.createElement('td')
+      tableCell.textContent += units
+      row.appendChild(tableCell);
+    }
   }
 }
 
