@@ -1,8 +1,19 @@
+::-moz-selection {
+  /* Code for Firefox */
+  color: rgb(255, 255, 255);
+  background: #009fdf;
+}
+
+::selection {
+  color: rgb(255, 255, 255);
+  background: #009fdf;
+}
+
 * {
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
@@ -24,6 +35,7 @@ nav {
 
 nav p {
   color: white;
+  font-weight: 600;
 }
 
 nav h2 {
