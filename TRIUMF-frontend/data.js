@@ -61,4 +61,13 @@ function mapData(data) {
   }
 }
 
+function insertTime(){
+  const d = new Date();
+  const element = document.querySelector(".time")
+  element.textContent = `${d.toTimeString()}`;
+}
+
+
+
 mapData(fetchData());
+insertTime()
