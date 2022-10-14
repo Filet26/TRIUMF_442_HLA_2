@@ -40,6 +40,10 @@ function fetchData() {
 }
 
 function mapData(data) {
+  const fillerTableItems = document.querySelectorAll('.filler');
+  fillerTableItems.forEach((element) => {
+    element.remove();
+  });
   const listPVDict = Object.entries(data.readPvDict);
   const listUnitsDict = Object.entries(data.readUnitsDict);
   console.log(listPVDict);
