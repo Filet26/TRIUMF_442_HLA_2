@@ -42,9 +42,37 @@ const myChart = new Chart(ctx, {
     ]
   },
   options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      },
+      title: {
+        display: true,
+        text: 'Voltage per 5 Second Cycle',
+        font: {
+          size: 25
+        }
+      }
+    },
     scales: {
+      x: {
+        grid: {
+          display: false
+        },
+        ticks: {
+          font: {
+            size: 25
+          }
+        }
+      },
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          font: {
+            size: 25
+          }
+        }
       }
     }
   }
