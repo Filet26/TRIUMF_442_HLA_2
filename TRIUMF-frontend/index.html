@@ -1,80 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OLIS Status</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open Sans"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
-  </head>
 
-  <body>
-    <script
-      defer
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
-    <script defer src="data.js"></script>
-    <header>
-      <nav>
-        <img src="./public/main-logo.png" class="logo" />
-        <p class="nav-text">
-          Canada's particle accelerator centre <br />Centre canadien
-          d'accélération des particules
-        </p>
-        <h2 class="time"></h2>
-      </nav>
-    </header>
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OLIS Status</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
+</head>
 
-      <!-- diagram Image -->
-      <section>
-        <h1>Particle Accelerator</h1>
-        <img src="./public/sciencetube.png" class="diagram-img" />
-      </section>
-      <!-- End Diagram Image -->
+<body>
+  <script defer src="./chart.js"></script>
+  <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script defer src="./data.js"></script>
+  <header>
+    <nav>
+      <img src="./public/main-logo.png" class="logo" />
+      <p class="nav-text">
+        Canada's particle accelerator centre <br />Centre canadien
+        d'accélération des particules
+      </p>
+      <h2 class="time"></h2>
+    </nav>
+  </header>
+  <main>
 
-      <!-- status information -->
-      <section>
-        <h2>Beam Status</h2>
-        <button>cool status</button>
-        <button>cool status</button>
-        <button>cool status</button>
-        <button>cool status</button>
-        <button>cool status</button>
-        <div width="500px">
-          <a
-            class="twitter-timeline"
-            data-width="500"
-            data-height="300"
-            href="https://twitter.com/kcharlto?ref_src=twsrc%5Etfw"
-            >Tweets by kcharlto</a
-          >
-        </div>
-      </section>
+    <!-- diagram Image -->
+    <section>
+      <h2 class="sectionTitle">Particle Accelerator</h2>
+      <img src="./public/sciencetube.png" class="diagram-img" />
+    </section>
+    <!-- End Diagram Image -->
 
-      <!-- END status information -->
 
-      <section>
-        <!-- DATA information -->
-        <h3>Live Data</h3>
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Desc</th>
-            <th>Units</th>
-          </thead>
-          <tbody></tbody>
-        </table>
-        <!-- END DATA information -->
-        <h4>Voltage Timeline</h4>
-        <img src="./public/chart.png" class="graph" />
-      </section>
-    </main>
-  </body>
+
+    <section>
+      <!-- DATA information -->
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Desc</th>
+          <th>Units</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- END DATA information -->
+      <h4>Voltage Timeline</h4>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </section>
+
+    <!-- status information -->
+    <section>
+
+      <div class="light">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        Aggressive Status
+      </div>
+      <div class="light">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        Neon Button
+      </div>
+      <div class="light">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        Neon Button
+      </div>
+      <div class="light">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        Neon Button
+      </div>
+      <div width="500px">
+        <a class="twitter-timeline" data-width="500" data-height="300"
+          href="https://twitter.com/kcharlto?ref_src=twsrc%5Etfw">Tweets by kcharlto</a>
+      </div>
+    </section>
+
+    <!-- END status information -->
+  </main>
+</body>
+
 </html>
