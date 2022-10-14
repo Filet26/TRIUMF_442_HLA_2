@@ -4,16 +4,19 @@ body {
   background-color: #009fdf;
 }
 
+/* RIUMF LOGO */
 img.logo {
   height: 100px;
 }
 
+/* VOLTAGE GRAPH */
 img.graph {
   width: 400px;
 }
 
+/* MAIN DIAGRAM */
 .diagram-img {
-  max-width: 900px;
+  max-width: 800px;
 }
 
 main {
