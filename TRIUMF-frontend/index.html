@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Triumf Demo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <script
-      defer
-      src="https://platform.twitter.com/widgets.js"
-      charset="utf-8"
-    ></script>
-    <script defer src="data.js"></script>
-    <header>
-      <img src="./public/main-logo.png" class="logo" />
-    </header>
-    <main>
-      <section>
-        <h1>Particle Accelerator</h1>
-        <img src="./public/sciencetube.png" class="diagram-img" />
-      </section>
-      <section>
-        <h2>Beam Status</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Triumf Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <script defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script defer src="data.js"></script>
+  <header>
+    <img src="./public/main-logo.png" class="logo" />
+  </header>
+  <main>
+    <section>
+      <h1>Particle Accelerator</h1>
+      <img src="./public/sciencetube.png" class="diagram-img" />
+    </section>
+    <section>
+      <h2>Beam Status</h2>
+      <span class="BeamContainer">
         <button>cool status</button>
         <button>cool status</button>
         <button>cool status</button>
         <button>cool status</button>
         <button>cool status</button>
-        <div width="500px">
-          <a
-            class="twitter-timeline"
-            data-width="500"
-            data-height="300"
-            href="https://twitter.com/kcharlto?ref_src=twsrc%5Etfw"
-            >Tweets by kcharlto</a
-          >
-        </div>
-      </section>
-      <section>
-        <h3>Live Data</h3>
-        <table>
-          <thead>
-            <th>Name</th>
-            <th>Value</th>
-            <th>Desc</th>
-            <th>Units</th>
-          </thead>
-          <tbody></tbody>
-        </table>
-        <h4>Voltage Timeline</h4>
-        <img src="./public/chart.png" class="graph" />
-      </section>
-    </main>
-  </body>
+      </span>
+      <div width="500px">
+        <a class="twitter-timeline" data-width="500" data-height="300"
+          href="https://twitter.com/kcharlto?ref_src=twsrc%5Etfw">Tweets by kcharlto</a>
+      </div>
+    </section>
+    <section>
+      <h3>Live Data</h3>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Desc</th>
+          <th>Units</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <h4>Voltage Timeline</h4>
+      <img src="./public/chart.png" class="graph" />
+    </section>
+  </main>
+</body>
+
 </html>
