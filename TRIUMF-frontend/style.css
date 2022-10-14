@@ -30,6 +30,12 @@ nav h2 {
   color: white;
 }
 
+table {
+  background-color: #ffffff;
+  border: 5px solid #ffffff;
+  margin: 0px 0px 5px;
+  width: 100%;
+}
 /* RIUMF LOGO */
 img.logo {
   height: 50px;
@@ -54,21 +60,32 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #faf9f6;
+  background-color: #f5f5f5;
   justify-content: space-between;
   position: relative;
-  border: 5px solid white;
+  border: 5px solid #f5f5f5;
   height: 100%;
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background: hwb(0 98% 2%);
+}
+tr:nth-child(odd) {
+  background: #fff;
 }
 
 div.subSection {
   display: flex;
   flex-direction: row;
+  background-color: #f5f5f5;
+  width: 100%;
 }
 
 div.smallContainer {
   display: flex;
   flex-direction: column;
+  margin: 0px 5px 5px;
 }
 
 h2.sectionTitle {
@@ -76,12 +93,12 @@ h2.sectionTitle {
   left: 10px;
   bottom: 10px;
   background-color: #f4f1f1;
-  border: 5px solid #f4f1f1;
+  border: 5px solid #f5f5f5;
   border-radius: 5px;
 }
 
-a {
-  width: 500px;
+canvas {
+  background-color: #ffffff;
 }
 
 /* responsive */

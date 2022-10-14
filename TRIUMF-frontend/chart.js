@@ -1,12 +1,26 @@
 const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
-  type: 'bar',
+  type: 'line',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: [
+      '0',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12'
+    ],
     datasets: [
       {
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        label: 'Voltage over 5 Second Intervals',
+        data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3, 0],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
