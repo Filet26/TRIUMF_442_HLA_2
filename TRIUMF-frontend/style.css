@@ -5,12 +5,17 @@ body {
 }
 
 img.logo {
-  height: 150px;
+  height: 100px;
 }
 
 img.graph {
   width: 400px;
 }
+
+.diagram-img {
+  max-width: 900px;
+}
+
 main {
   display: flex;
   flex-direction: row;
@@ -23,6 +28,7 @@ section {
   background-color: #faf9f6;
   justify-content: space-between;
 }
+
 a {
   width: 500px;
 }
