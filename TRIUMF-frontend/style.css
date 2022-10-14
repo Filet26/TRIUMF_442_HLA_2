@@ -2,11 +2,28 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #009fdf;
+  height: 100vh;
+}
+
+/* nav bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav p {
+  color: white;
+}
+
+nav h2 {
+  color: white;
 }
 
 /* RIUMF LOGO */
 img.logo {
-  height: 100px;
+  height: 50px;
 }
 
 /* VOLTAGE GRAPH */
@@ -30,6 +47,7 @@ section {
   align-items: center;
   background-color: #faf9f6;
   justify-content: space-between;
+  width: 100vw;
 }
 
 a {
@@ -38,4 +56,6 @@ a {
 
 * {
   color: black;
+  margin: 0;
+  padding: 0;
 }

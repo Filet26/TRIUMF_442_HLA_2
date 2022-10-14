@@ -15,13 +15,24 @@
     ></script>
     <script defer src="data.js"></script>
     <header>
-      <img src="./public/main-logo.png" class="logo" />
+      <nav>
+        <img src="./public/main-logo.png" class="logo" />
+        <p class="nav-text">
+          Canada's particle accelerator centre <br />Centre canadien
+          d'accélération des particules
+        </p>
+        <h2>Current Time: 9:23:23</h2>
+      </nav>
     </header>
     <main>
+      <!-- diagram Image -->
       <section>
         <h1>Particle Accelerator</h1>
         <img src="./public/sciencetube.png" class="diagram-img" />
       </section>
+      <!-- End Diagram Image -->
+
+      <!-- status information -->
       <section>
         <h2>Beam Status</h2>
         <button>cool status</button>
@@ -39,7 +50,11 @@
           >
         </div>
       </section>
+
+      <!-- END status information -->
+
       <section>
+        <!-- DATA information -->
         <h3>Live Data</h3>
         <table>
           <thead>
@@ -50,6 +65,7 @@
           </thead>
           <tbody></tbody>
         </table>
+        <!-- END DATA information -->
         <h4>Voltage Timeline</h4>
         <img src="./public/chart.png" class="graph" />
       </section>
