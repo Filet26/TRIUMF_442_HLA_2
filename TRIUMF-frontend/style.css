@@ -1,3 +1,10 @@
+* {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans';
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -54,6 +61,16 @@ section {
   height: 100%;
 }
 
+div.subSection {
+  display: flex;
+  flex-direction: row;
+}
+
+div.smallContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 h2.sectionTitle {
   position: absolute;
   left: 10px;
@@ -62,16 +79,11 @@ h2.sectionTitle {
   border: 5px solid #f4f1f1;
   border-radius: 5px;
 }
+
 a {
   width: 500px;
 }
 
-* {
-  color: black;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans';
-}
 /* responsive */
 @media only screen and (max-width: 600px) {
   html,
@@ -107,7 +119,7 @@ a {
   position: relative;
   padding: 25px 30px;
   color: #17b825;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
   transition: 0.5s;
   letter-spacing: 4px;

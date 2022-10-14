@@ -57,11 +57,10 @@ function mapData(data) {
       tableCell.textContent += property;
       row.appendChild(tableCell);
     }
-    for (const units of listUnitsDict[index]) {
-      const tableCell = document.createElement('td');
-      tableCell.textContent += units;
-      row.appendChild(tableCell);
-    }
+
+    const tableCell = document.createElement('td');
+    tableCell.textContent += listUnitsDict[index][1];
+    row.appendChild(tableCell);
   }
 }
 
