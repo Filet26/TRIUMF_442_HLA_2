@@ -65,9 +65,15 @@ function insertTime(){
   const d = new Date();
   const element = document.querySelector(".time")
   element.textContent = `${d.toTimeString()}`;
+  console.log(d.toTimeString())
 }
 
+insertTime()
 
+//clock goes tick tock
+setInterval(() => {
+  insertTime()
+}, 1000);
 
 mapData(fetchData());
-insertTime()
+
