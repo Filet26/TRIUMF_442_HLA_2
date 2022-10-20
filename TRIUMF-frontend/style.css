@@ -93,12 +93,6 @@ img.graph {
   font-weight: 500;
 }
 
-.imageLabelContainer label.diagramLabel3 {
-  position: absolute;
-  left: 50%;
-  bottom: 55%;
-}
-
 main {
   display: flex;
   flex-direction: row;
