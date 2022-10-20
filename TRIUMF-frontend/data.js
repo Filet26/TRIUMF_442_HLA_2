@@ -67,6 +67,17 @@ async function mapData(data) {
   }
 }
 
+async function updateSecondColumnTableValues() {
+  const data = await getLocalOlisData();
+  const listPVDict = Object.entries(data);
+  const tableBody = document.querySelector('tbody');
+  const tableRows = tableBody.querySelectorAll('tr');
+  tableRows.forEach((row, index) => {
+    const tableCell = row.querySelector('td:nth-child(2)');
+    tableCell.textContent = listPVDict[index][1];
+  });
+}
+
 function insertTime() {
   const d = new Date();
   const element = document.querySelector('.time');
@@ -96,6 +107,10 @@ setInterval(() => {
 }, 1000);
 
 mapData(fetchData());
+
+setInterval(() => {
+  updateSecondColumnTableValues();
+}, 5000);
 
 try {
   getLocalData().then((text) => {
