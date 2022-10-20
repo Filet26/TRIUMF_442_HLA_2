@@ -39,16 +39,21 @@ function fetchData() {
   return data;
 }
 
-async function mapData(data) {
-  const fillerTableItems = document.querySelectorAll('.filler');
+function removeFiller() {
+  const fillerTableItems = document.querySelectorAll('.original');
   fillerTableItems.forEach((element) => {
     element.remove();
   });
+}
+
+async function mapData(data) {
+  removeFiller();
   const listPVDict = Object.entries(await getLocalOlisData());
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector('tbody');
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
+    row.className = 'original';
     tableBody.appendChild(row);
     for (const property of value) {
       const tableCell = document.createElement('td');
@@ -84,30 +89,6 @@ async function getLocalOlisData() {
   return freshData;
 }
 
-async function getFreshData() {
-  const response = await fetch(
-    'https://beta.hla.triumf.ca/jaya-isac/IOS:XCB1AW:RDVOL+IOS:XCB1AE:RDVOL+IOS:PSWXCB1A:STATON',
-    {
-      credentials: 'omit',
-      headers: {
-        'User-Agent':
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0',
-        Accept:
-          'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-CA,en-US;q=0.7,en;q=0.3',
-        'Upgrade-Insecure-Requests': '1',
-        'Sec-Fetch-Dest': 'document',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'none',
-        'Sec-Fetch-User': '?1'
-      },
-      method: 'GET',
-      mode: 'cors'
-    }
-  );
-  const freshData = await response.json();
-  return freshData;
-}
 insertTime();
 //clock goes tick tock
 setInterval(() => {
@@ -121,9 +102,6 @@ try {
     console.log(text);
   });
   getLocalOlisData().then((text) => {
-    console.log(text);
-  });
-  getFreshData().then((text) => {
     console.log(text);
   });
 } catch (error) {
