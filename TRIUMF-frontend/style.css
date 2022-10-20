@@ -24,6 +24,7 @@ body {
   width: 100%;
   margin: 0;
   align-items: stretch;
+  font-weight: 500;
 }
 
 /* nav bar */
@@ -111,10 +112,13 @@ section {
   width: 100%;
 }
 
-tr:nth-child(even) {
+tr:nth-child(odd) {
   background: #efefef;
 }
-tr:nth-child(odd) {
+tr:nth-child(even) {
+  background: #fff;
+}
+th {
   background: #fff;
 }
 
