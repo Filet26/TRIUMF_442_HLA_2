@@ -80,7 +80,7 @@ img.graph {
 
 .imageLabelContainer label.diagramLabel {
   position: absolute;
-  left: 50%;
+  left: 45%;
   bottom: 9%;
   font-size: large;
   font-weight: 500;
@@ -88,7 +88,7 @@ img.graph {
 
 .imageLabelContainer label.diagramLabel2 {
   position: absolute;
-  left: 50%;
+  left: 45%;
   bottom: 65%;
   font-size: large;
   font-weight: 500;
