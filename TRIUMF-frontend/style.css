@@ -134,6 +134,7 @@ div.smallContainer {
   display: flex;
   flex-direction: column;
   margin: 0px 5px 5px;
+  width: 45%;
 }
 
 h2.sectionTitle {
