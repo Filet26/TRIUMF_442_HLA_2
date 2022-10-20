@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "express-xml-bodyparser": "^0.3.0",
+    "install": "^0.13.0",
+    "node-fetch": "^3.2.10",
+    "npm": "^8.19.2",
+    "xml-js": "^1.6.11"
+  },
+  "name": "express-mongodb",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
