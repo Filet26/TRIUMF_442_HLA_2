@@ -39,15 +39,13 @@ function fetchData() {
   return data;
 }
 
-function mapData(data) {
+async function mapData(data) {
   const fillerTableItems = document.querySelectorAll('.filler');
   fillerTableItems.forEach((element) => {
     element.remove();
   });
-  const listPVDict = Object.entries(data.readPvDict);
+  const listPVDict = Object.entries(await getLocalOlisData());
   const listUnitsDict = Object.entries(data.readUnitsDict);
-  console.log(listPVDict);
-  console.log(listUnitsDict);
   const tableBody = document.querySelector('tbody');
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
@@ -72,6 +70,14 @@ function insertTime() {
 
 async function getLocalData() {
   const response = await fetch('http://127.0.0.1:8081/', {
+    method: 'GET'
+  });
+  const freshData = await response.json();
+  return freshData;
+}
+
+async function getLocalOlisData() {
+  const response = await fetch('http://127.0.0.1:8081/OLIS', {
     method: 'GET'
   });
   const freshData = await response.json();
@@ -112,6 +118,9 @@ mapData(fetchData());
 
 try {
   getLocalData().then((text) => {
+    console.log(text);
+  });
+  getLocalOlisData().then((text) => {
     console.log(text);
   });
   getFreshData().then((text) => {
