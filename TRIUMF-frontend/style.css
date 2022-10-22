@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
@@ -177,6 +177,12 @@ canvas {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px,
     #89ff00 0 2px 12px;
+}
+
+/* Graph Data Invisible Div */
+
+#graph_data {
+  display: none;
 }
 
 /* cursed neon css below*/
