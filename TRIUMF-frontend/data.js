@@ -66,9 +66,9 @@ async function mapData(data) {
 }
 
 async function updateGraphData() {
-  const graph_data = await getGraphData();
-  const invis_data = document.querySelector('#graph_data');
-  invis_data.innerHTML = graph_data['IOS:FC6:SCALECUR'];
+  const graphData = await getGraphData();
+  const hiddenData = document.querySelector('#graph_data');
+  hiddenData.innerHTML = graphData['IOS:FC6:SCALECUR'];
 }
 
 async function updateSecondColumnTableValues() {
