@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 body {
@@ -78,7 +78,7 @@ img.graph {
   height: 100%;
 }
 
-.imageLabelContainer label.diagramLabel {
+.imageLabelContainer label.diagramLabelBeamSource {
   position: absolute;
   left: 45%;
   bottom: 9%;
@@ -86,7 +86,7 @@ img.graph {
   font-weight: 500;
 }
 
-.imageLabelContainer label.diagramLabel2 {
+.imageLabelContainer label.diagramLabelBeamStatus {
   position: absolute;
   left: 45%;
   bottom: 65%;
