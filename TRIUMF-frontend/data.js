@@ -65,9 +65,14 @@ async function mapData(data) {
   }
 }
 
+async function updateGraphData() {
+  const graph_data = await getGraphData();
+  const invis_data = document.querySelector('#graph_data');
+  invis_data.innerHTML = graph_data['IOS:FC6:SCALECUR'];
+}
+
 async function updateSecondColumnTableValues() {
   const data = await getLocalOlisData();
-  const graph_data = await getGraphData();
   const listPVDict = Object.entries(data);
   const tableBody = document.querySelector('tbody');
   const tableRows = tableBody.querySelectorAll('tr');
@@ -75,9 +80,6 @@ async function updateSecondColumnTableValues() {
     const tableCell = row.querySelector('td:nth-child(2)');
     tableCell.textContent = listPVDict[index][1];
   });
-
-  const invis_data = document.querySelector('#graph_data');
-  invis_data.innerHTML = graph_data['IOS:FC6:SCALECUR'];
 }
 
 function insertTime() {
@@ -136,6 +138,8 @@ async function setDiagramLabels() {
       'Beam Status: ON';
     return;
   }
+  document.querySelector('.diagramLabelBeamSource').innerHTML =
+    'Beam Source: None';
   document.querySelector('.diagramLabelBeamStatus').innerHTML =
     'Beam Status: OFF';
   return;
@@ -149,8 +153,10 @@ setInterval(() => {
 
 mapData(fetchData());
 setDiagramLabels();
+updateGraphData();
 
 setInterval(() => {
   updateSecondColumnTableValues();
   setDiagramLabels();
+  updateGraphData();
 }, 5000);
