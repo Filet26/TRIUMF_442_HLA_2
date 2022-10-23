@@ -1,16 +1,16 @@
 const ctx = document.getElementById('myChart');
 
-let data_array = [];
+let dataArray = [];
 
-function UpdateGraph() {
-  const data_value = document.getElementById('graph_data').innerText;
-  data_array.push(data_value);
-  if (data_array.length > 13) {
-    data_array.shift();
+function updateGraph() {
+  const dataValue = document.getElementById('graph_data').innerText;
+  dataArray.push(dataValue);
+  if (dataArray.length > 13) {
+    dataArray.shift();
   }
 }
 
-setInterval(UpdateGraph, 5000);
+setInterval(updateGraph, 5000);
 
 const myChart = new Chart(ctx, {
   type: 'line',
@@ -34,7 +34,7 @@ const myChart = new Chart(ctx, {
     datasets: [
       {
         label: 'Voltage over 5 Second Intervals',
-        data: data_array,
+        data: dataArray,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
