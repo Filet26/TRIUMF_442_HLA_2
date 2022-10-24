@@ -78,11 +78,25 @@ const myChart = new Chart(ctx, {
           font: {
             size: 25
           }
+        },
+        title: {
+          display: true,
+          text: 'Interval',
+          font: {
+            size: 25
+          }
         }
       },
       y: {
         beginAtZero: true,
         ticks: {
+          font: {
+            size: 25
+          }
+        },
+        title: {
+          display: true,
+          text: 'Units',
           font: {
             size: 25
           }
