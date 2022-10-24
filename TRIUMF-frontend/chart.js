@@ -4,7 +4,7 @@ let dataArray = [];
 
 function updateGraph() {
   const dataValue = document.getElementById('graph_data').innerText;
-  dataArray.push(dataValue);
+  dataArray.push(dataValue.slice(0, 2));
   if (dataArray.length > 13) {
     dataArray.shift();
   }
@@ -16,7 +16,6 @@ const myChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: [
-      '0',
       '1',
       '2',
       '3',
@@ -28,7 +27,8 @@ const myChart = new Chart(ctx, {
       '9',
       '10',
       '11',
-      '12'
+      '12',
+      '13'
     ],
 
     datasets: [
@@ -63,7 +63,7 @@ const myChart = new Chart(ctx, {
       },
       title: {
         display: true,
-        text: 'Dr.Chales Fav Variable, IOS:FC6:SCALECUR',
+        text: 'IOS:FC6:SCALECUR',
         font: {
           size: 25
         }
@@ -81,7 +81,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: 'Interval',
+          text: 'Interval (5s)',
           font: {
             size: 25
           }
@@ -96,7 +96,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: 'Units',
+          text: 'Amperes (10E-12)',
           font: {
             size: 25
           }
