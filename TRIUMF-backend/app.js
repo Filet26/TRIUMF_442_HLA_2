@@ -13,9 +13,13 @@ app.use(cors());
 let laserDirectionVariables;
 let olisVariables;
 let graph_data;
-graph_data = await getGraphData();
-laserDirectionVariables = await getLaserDirectionVariables();
-olisVariables = await getOlisVariables();
+getAllData();
+
+async function getAllData() {
+  graph_data = await getGraphData();
+  laserDirectionVariables = await getLaserDirectionVariables();
+  olisVariables = await getOlisVariables();
+}
 
 async function getLaserDirectionVariables() {
   const url =
