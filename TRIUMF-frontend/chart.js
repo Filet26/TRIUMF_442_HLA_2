@@ -1,13 +1,38 @@
 const ctx = document.getElementById("myChart");
 
 let dataArray = [];
+let labelArray = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+];
+let cycles = 0;
 
 function updateGraph() {
   const dataValue = document.getElementById("graph_data").innerText;
-  dataArray.push(dataValue);
+  dataArray.push(dataValue.slice(0, 2));
   if (dataArray.length > 13) {
     dataArray.shift();
   }
+  cycles++;
+  if (cycles > 13) {
+    updateLabel();
+  }
+}
+
+function updateLabel() {
+  labelArray.push((Number(labelArray.at(-1)) + 1).toString());
+  labelArray.shift();
 }
 
 setInterval(updateGraph, 5000);
@@ -15,22 +40,7 @@ setInterval(updateGraph, 5000);
 const myChart = new Chart(ctx, {
   type: "line",
   data: {
-    labels: [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "11",
-      "12",
-    ],
-
+    labels: labelArray,
     datasets: [
       {
         label: "Voltage over 5 Second Intervals",
@@ -63,7 +73,7 @@ const myChart = new Chart(ctx, {
       },
       title: {
         display: true,
-        text: "Dr.Chales Fav Variable, IOS:FC6:SCALECUR",
+        text: "IOS:FC6:SCALECUR",
         font: {
           size: 25,
         },
@@ -79,10 +89,24 @@ const myChart = new Chart(ctx, {
             size: 25,
           },
         },
+        title: {
+          display: true,
+          text: "Interval (5s)",
+          font: {
+            size: 25,
+          },
+        },
       },
       y: {
         beginAtZero: true,
         ticks: {
+          font: {
+            size: 25,
+          },
+        },
+        title: {
+          display: true,
+          text: "Amperes (10E-12)",
           font: {
             size: 25,
           },
