@@ -1,4 +1,5 @@
 function fetchData() {
+  // dummy data
   const data = {
     readPvDict: {
       'IOS:BEAMTYPE': '1',
