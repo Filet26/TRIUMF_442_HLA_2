@@ -1,37 +1,25 @@
 const ctx = document.getElementById("myChart");
 
 let dataArray = [];
-let labelArray = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-];
+
+let labelArray = Array.from({ length: 50 }, (x, i) => i + 5);
+
 let cycles = 0;
 
 function updateGraph() {
   const dataValue = document.getElementById("graph_data").innerText;
   dataArray.push(dataValue.slice(0, 2));
-  if (dataArray.length > 13) {
+  if (dataArray.length > 50) {
     dataArray.shift();
   }
   cycles++;
-  if (cycles > 13) {
+  if (cycles > 50) {
     updateLabel();
   }
 }
 
 function updateLabel() {
-  labelArray.push((Number(labelArray.at(-1)) + 1).toString());
+  labelArray.push(Number(labelArray.at(-1)).toString());
   labelArray.shift();
 }
 
@@ -88,6 +76,10 @@ const myChart = new Chart(ctx, {
           font: {
             size: 25,
           },
+          callback: function (val, index) {
+            // Hide every 2nd tick label
+            return index % 2 === 0 ? this.getLabelForValue(val) : "";
+          },
         },
         title: {
           display: true,
@@ -106,7 +98,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: "Amperes (10E-12)",
+          text: "Amperes",
           font: {
             size: 25,
           },

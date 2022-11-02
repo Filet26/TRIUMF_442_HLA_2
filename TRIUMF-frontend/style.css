@@ -112,6 +112,14 @@ section {
   width: 100%;
 }
 
+.original:nth-child(n):nth-child(-n + 15) {
+  background-color: lightgreen;
+}
+
+.original:nth-child(3n-6n) {
+  background-color: lightgreen;
+}
+
 tr:nth-child(odd) {
   background: #efefef;
 }
