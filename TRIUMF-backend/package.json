@@ -7,6 +7,7 @@
     "install": "^0.13.0",
     "node-fetch": "^3.2.10",
     "npm": "^8.19.2",
+    "serve-favicon": "^2.5.0",
     "xml-js": "^1.6.11"
   },
   "name": "express-mongodb",

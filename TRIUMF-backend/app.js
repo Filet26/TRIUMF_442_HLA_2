@@ -78,7 +78,6 @@ app.get(`/`, async function (req, res) {
 });
 
 app.get("/Dashboard", (req, res) => {
-  console.log(__dirname);
   res.sendFile(path.resolve("../TRIUMF-frontend/index.html"));
 });
 
