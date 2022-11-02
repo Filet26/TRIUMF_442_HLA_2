@@ -66,7 +66,7 @@ setInterval(async () => {
   graph_data = await getGraphData();
 }, 5000);
 
-app.get(`/`, async function (req, res) {
+app.get("/direction", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(laserDirectionVariables));
     let data = parse_xml(xmlObject);
@@ -81,7 +81,7 @@ app.get("/Dashboard", (req, res) => {
   res.sendFile(path.resolve("../TRIUMF-frontend/index.html"));
 });
 
-app.get(`/OLIS`, async function (req, res) {
+app.get("/OLIS", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(olisVariables));
     let data = parse_xml(xmlObject);
