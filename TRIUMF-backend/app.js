@@ -20,11 +20,13 @@ const __dirname = path.dirname(__filename);
 // for CSS
 app.use(express.static(path.resolve("../TRIUMF-frontend/")));
 
+// pre-initialized variables
 let laserDirectionVariables;
 let olisVariables;
 let graph_data;
 getAllData();
 
+// gets all the data
 async function getAllData() {
   graph_data = await getGraphData();
   laserDirectionVariables = await getLaserDirectionVariables();
