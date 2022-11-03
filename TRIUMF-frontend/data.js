@@ -45,6 +45,19 @@ function fetchData() {
 //   });
 // }
 
+// this function rounds the PV values
+// will also parse values using scientific notation (10.923e-09 -> 10.9e-09)
+function roundNum(num) {
+  let eIndex = num.indexOf("e");
+  if (eIndex == -1) {
+    return Number(num).toPrecision(4);
+  } else {
+    let convertedNum = Number(num.substring(0, eIndex)).toPrecision(4);
+    let notation = num.substring(eIndex);
+    return convertedNum + notation;
+  }
+}
+
 async function mapData(data) {
   // removeFiller();
   const listPVDict = Object.entries(await getLocalOlisData());
@@ -76,7 +89,7 @@ async function mapData(data) {
     nameRow.textContent += value[0];
 
     // actual number
-    valueRow.textContent += value[1];
+    valueRow.textContent += roundNum(value[1]);
 
     row.appendChild(nameRow);
     row.appendChild(valueRow);
@@ -110,7 +123,7 @@ async function updateSecondColumnTableValues() {
   const tableRows = tableBody.querySelectorAll("tr");
   tableRows.forEach((row, index) => {
     const tableCell = row.querySelector("td:nth-child(2)");
-    tableCell.textContent = listPVDict[index][1];
+    tableCell.textContent = roundNum(listPVDict[index][1]);
   });
 }
 
@@ -152,7 +165,6 @@ async function setDiagramLabels() {
   let status = document.querySelector(".diagramLabelBeamStatus");
 
   if (status.innerHTML == "Beam Status: ON") {
-    console.log("HELLO");
     status.style.backgroundColor = "lightgreen";
   } else {
     status.style.backgroundColor = "red";
