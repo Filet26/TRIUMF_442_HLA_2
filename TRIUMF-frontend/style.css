@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
@@ -36,7 +36,7 @@ nav {
 }
 
 .navText {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 nav p {
@@ -97,7 +97,8 @@ img.graph {
 main {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  max-height: 100vh;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -112,14 +113,37 @@ section {
   width: 100%;
 }
 
-tr:nth-child(odd) {
+footer {
+  display: flex;
+  min-height: 15vh;
+  background-color: #007bdff9;
+}
+
+/* tr:nth-child(odd) {
   background: #efefef;
 }
 tr:nth-child(even) {
   background: #fff;
 }
+ */
 th {
   background: #fff;
+}
+
+.vacuum {
+  background-color: #abff00;
+}
+
+.mcis {
+  background-color: darkgreen;
+}
+
+.aq {
+  background-color: lightblue;
+}
+
+.sis {
+  background-color: #efefef;
 }
 
 div.subSection {

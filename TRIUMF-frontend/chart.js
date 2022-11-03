@@ -61,7 +61,7 @@ const myChart = new Chart(ctx, {
       },
       title: {
         display: true,
-        text: "IOS:FC6:SCALECUR",
+        text: "Faraday Cup 6 (FC6) Current, per 5 Second Intervals",
         font: {
           size: 25,
         },
