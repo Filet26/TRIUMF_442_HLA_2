@@ -63,18 +63,45 @@ async function mapData(data) {
   const listPVDict = Object.entries(await getLocalOlisData());
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector("tbody");
+
+  //
+
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement("tr");
-
     // assign class based on PV index
-    if (index == 9 || index == 10 || index == 11) {
-      row.className = "original vacuum";
-    } else if (index == 8 || index == 7 || index == 6) {
-      row.className = "original aq";
+
+    if (index == 2 || index == 1 || index == 0) {
+      row.className = "original sis";
+      if (index == 0) {
+        const beamName = document.createElement("td");
+        beamName.rowSpan = "3";
+        beamName.textContent = "SIS";
+        row.appendChild(beamName);
+      }
     } else if (index == 5 || index == 4 || index == 3) {
       row.className = "original mcis";
-    } else if (index == 2 || index == 1 || index == 0) {
-      row.className = "original sis";
+      if (index == 3) {
+        const beamName = document.createElement("td");
+        beamName.rowSpan = "3";
+        beamName.textContent = "MCIS";
+        row.appendChild(beamName);
+      }
+    } else if (index == 8 || index == 7 || index == 6) {
+      row.className = "original aq";
+      if (index == 6) {
+        const beamName = document.createElement("td");
+        beamName.rowSpan = "3";
+        beamName.textContent = "A/Q";
+        row.appendChild(beamName);
+      }
+    } else if (index == 9 || index == 10 || index == 11) {
+      row.className = "original vacuum";
+      if (index == 9) {
+        const beamName = document.createElement("td");
+        beamName.rowSpan = "3";
+        beamName.textContent = "Vacuum";
+        row.appendChild(beamName);
+      }
     } else {
       row.className = "original";
     }
@@ -82,6 +109,7 @@ async function mapData(data) {
     tableBody.appendChild(row);
 
     // create table cells
+
     const nameRow = document.createElement("td");
     const valueRow = document.createElement("td");
 
@@ -122,7 +150,7 @@ async function updateSecondColumnTableValues() {
   const tableBody = document.querySelector("tbody");
   const tableRows = tableBody.querySelectorAll("tr");
   tableRows.forEach((row, index) => {
-    const tableCell = row.querySelector("td:nth-child(2)");
+    const tableCell = row.querySelector("td:nth-child(3)");
     tableCell.textContent = roundNum(listPVDict[index][1]);
   });
 }

@@ -98,7 +98,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: "Amperes",
+          text: "Amps",
           font: {
             size: 25,
           },

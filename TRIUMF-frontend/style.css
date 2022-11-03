@@ -128,6 +128,11 @@ tr:nth-child(even) {
  */
 th {
   background: #fff;
+  text-align: center;
+}
+
+td {
+  text-align: center;
 }
 
 .vacuum {
@@ -135,7 +140,7 @@ th {
 }
 
 .mcis {
-  background-color: darkgreen;
+  background-color: rgb(14, 169, 14);
 }
 
 .aq {
