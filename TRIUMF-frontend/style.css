@@ -92,7 +92,7 @@ img.graph {
   bottom: 65%;
   font-size: large;
   font-weight: 500;
-  background-color: lightgreen;
+  background-color: rgb(237, 174, 174);
 }
 
 main {
@@ -195,6 +195,21 @@ canvas {
   }
   header {
     width: 100%;
+  }
+  .imageLabelContainer {
+    width: 100%;
+  }
+  img.logo {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navText {
+    padding: 5%;
   }
 }
 
