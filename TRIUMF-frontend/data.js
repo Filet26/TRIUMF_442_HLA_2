@@ -208,6 +208,7 @@ async function setDiagramLabels() {
   } else {
     status.style.backgroundColor = 'red';
   }
+
   if (aData > 400 && bData > 400 && cData == 1) {
     document.querySelector('.diagramLabelBeamSource').innerHTML =
       'Beam Source: Surface Ion';
