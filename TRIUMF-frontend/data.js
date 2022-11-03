@@ -203,10 +203,10 @@ async function setDiagramLabels() {
   const cData = freshData['IOS:PSWXCB1A:STATON'];
   let status = document.querySelector('.diagramLabelBeamStatus');
 
-  if (status.innerHTML == 'Beam Status: ON') {
-    status.style.backgroundColor = 'lightgreen';
-  } else {
+  if (status.innerHTML == 'Beam Status: OFF') {
     status.style.backgroundColor = 'red';
+  } else {
+    status.style.backgroundColor = 'lightgreen';
   }
 
   if (aData > 400 && bData > 400 && cData == 1) {
