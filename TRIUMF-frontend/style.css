@@ -80,19 +80,18 @@ img.graph {
 
 .imageLabelContainer label.diagramLabelBeamSource {
   position: absolute;
-  left: 45%;
-  bottom: 9%;
+  right: 30%;
+  bottom: 25%;
   font-size: large;
   font-weight: 500;
 }
 
 .imageLabelContainer label.diagramLabelBeamStatus {
   position: absolute;
-  left: 45%;
-  bottom: 65%;
+  right: 30%;
+  bottom: 50%;
   font-size: large;
   font-weight: 500;
-  background-color: rgb(237, 174, 174);
 }
 
 main {

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757.13 879.24">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-5, .cls-7, .cls-11, .cls-13, .cls-19 {
+        stroke: #231f20;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-8, .cls-10, .cls-11, .cls-12, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-20, .cls-21, .cls-22, .cls-23 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #ef4445;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #ef4445;
+      }
+
+      .cls-3, .cls-6, .cls-8, .cls-11, .cls-13, .cls-20, .cls-21 {
+        stroke-width: 2px;
+      }
+
+      .cls-5, .cls-9, .cls-14, .cls-16, .cls-19 {
+        stroke-width: 3px;
+      }
+
+      .cls-6 {
+        stroke: #ec068d;
+      }
+
+      .cls-7, .cls-9, .cls-13, .cls-19 {
+        fill: #231f20;
+      }
+
+      .cls-8, .cls-12 {
+        stroke: #ed2024;
+      }
+    
+      .cls-9, .cls-14, .cls-21, .cls-23 {
+        <!-- laser color -->
+        stroke: #FF299E;
+      }
+
+      .cls-10 {
+        stroke: #6fbe44;
+      }
+
+      .cls-15 {
+        stroke: #3953a5;
+      }
+
+      .cls-16, .cls-17 {
+        stroke: #72cddd;
+      }
+
+      .cls-18, .cls-20 {
+        stroke: #7ac143;
+      }
+
+      .cls-22 {
+        stroke: #3c54a4;
+      }
+
+      .cls-23 {
+        stroke-width: 2.5px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_7" data-name="Layer 7">
+    <path class="cls-5" d="M528.33,327.63l93.96,48.27,6.62,3.4,.17,10.13,2.06,136c-2.91,147.95,32.01,148.45,32.01,148.45-.62,28.98-25.23,80.75-54.21,80.13-28.98-.62-51.35-53.4-50.73-82.37,0,0,32.78,1.29,35.97-132.24l-2.04-135.71v-2.69s-80.31-41.25-80.31-41.25"/>
+    <path class="cls-19" d="M524.52,304.13l.59,.3,5.7,2.93c-6.91-3.55-10.47,4.94-10.47,4.94l4.18-8.17Z"/>
+    <path class="cls-19" d="M491.09,369.06l.59,.3,5.7,2.93c-6.91-3.55-2.08-11.39-2.08-11.39l-4.21,8.16Z"/>
+    <path class="cls-5" d="M147.83,126.23s-17.21-7.77-10.87-20.11"/>
+    <path class="cls-5" d="M127.02,166.74s-16.33-9.48-22.78,3.07"/>
+    <polygon class="cls-5" points="128.75 106.59 130.59 103.02 134.6 102.83 136.77 106.2 134.93 109.77 130.93 109.96 128.75 106.59"/>
+    <polygon class="cls-5" points="122.26 103.22 124.1 99.66 128.1 99.46 130.28 102.83 128.44 106.4 124.44 106.6 122.26 103.22"/>
+    <polygon class="cls-5" points="124.6 104.46 126.43 100.89 130.44 100.69 132.61 104.07 130.78 107.63 126.77 107.83 124.6 104.46"/>
+    <polygon class="cls-5" points="126.73 105.55 128.56 101.98 132.57 101.79 134.74 105.16 132.91 108.73 128.9 108.92 126.73 105.55"/>
+    <polygon class="cls-5" points="120.16 102.18 122 98.61 126.01 98.42 128.18 101.79 126.34 105.35 122.34 105.55 120.16 102.18"/>
+    <polygon class="cls-5" points="117.89 100.98 119.73 97.41 123.73 97.22 125.91 100.59 124.07 104.16 120.06 104.35 117.89 100.98"/>
+    <polygon class="cls-5" points="115.87 99.97 117.7 96.4 121.71 96.21 123.88 99.58 122.05 103.15 118.04 103.34 115.87 99.97"/>
+    <polygon class="cls-5" points="113.67 98.84 115.5 95.27 119.51 95.08 121.68 98.45 119.85 102.02 115.84 102.21 113.67 98.84"/>
+    <polygon class="cls-5" points="98.02 166.43 99.85 162.86 103.86 162.67 106.03 166.04 104.2 169.61 100.19 169.8 98.02 166.43"/>
+    <polygon class="cls-5" points="91.53 163.06 93.36 159.5 97.37 159.3 99.54 162.67 97.71 166.24 93.7 166.44 91.53 163.06"/>
+    <polygon class="cls-5" points="93.86 164.29 95.7 160.73 99.7 160.53 101.87 163.91 100.04 167.47 96.03 167.67 93.86 164.29"/>
+    <polygon class="cls-5" points="95.99 165.39 97.83 161.82 101.83 161.63 104.01 165 102.17 168.57 98.17 168.76 95.99 165.39"/>
+    <polygon class="cls-5" points="89.43 162.02 91.26 158.45 95.27 158.26 97.44 161.63 95.61 165.19 91.6 165.39 89.43 162.02"/>
+    <polygon class="cls-5" points="87.16 160.82 88.99 157.25 93 157.06 95.17 160.43 93.34 164 89.33 164.19 87.16 160.82"/>
+    <polygon class="cls-5" points="85.13 159.81 86.97 156.24 90.97 156.05 93.15 159.42 91.31 162.99 87.3 163.18 85.13 159.81"/>
+    <polygon class="cls-5" points="82.93 158.68 84.77 155.11 88.77 154.92 90.95 158.29 89.11 161.86 85.11 162.05 82.93 158.68"/>
+    <path class="cls-5" d="M92.82,97.88s16.34,9.47,22.68-2.88"/>
+    <path class="cls-5" d="M72.01,138.38s17.22,7.76,10.77,20.31"/>
+  </g>
+  <g id="Layer_9" data-name="Layer 9">
+    <rect class="cls-5" x="477.61" y="332.79" width="73.03" height="14.11" transform="translate(1051.35 37.84) rotate(117.19)"/>
+    <rect class="cls-7" x="505.94" y="305.07" width="9.99" height="16.03" transform="translate(1022.9 1.69) rotate(117.19)"/>
+    <rect class="cls-7" x="485.55" y="345.61" width="9.1" height="16.03" transform="translate(1028.61 79.28) rotate(117.19)"/>
+    <path class="cls-5" d="M524.54,304.14s-3.92,8.31-18.45,.84c-14.53-7.47-10.34-15.63-10.34-15.63l-4.2,8.17,8.23,4.23-4.6-5.07-.53-3.16-2.15,4.01,3.7,1.41-2.39-3.26,.28,2.27,2.75,1.48"/>
+    <path class="cls-5" d="M491.03,369.36s4.25-7.59-10.28-15.05-18.73,.7-18.73,.7"/>
+    <polygon class="cls-7" points="468.75 348.14 494.09 298.81 500.31 302.01 506.09 304.98 480.75 354.3 468.75 348.14"/>
+    <polyline class="cls-5" points="474.07 350.87 465.42 346.43 488.58 301.34 490.76 297.1 499.06 301.37"/>
+    <line class="cls-5" x1="494.95" y1="288.94" x2="461.22" y2="354.59"/>
+    <polyline class="cls-5" points="462.76 352.95 466.4 346.93 472.03 350.79 468.51 349.71 467.2 350.11 466.49 350.6 465.41 350.97 464.64 351.52 464.1 351.8 465 349.87 466.23 348.73 467.3 347.94 468.5 349.18 465.83 350.03"/>
+    <rect class="cls-5" x="329.11" y="221.56" width="72.24" height="84.42" transform="translate(766.74 59.44) rotate(117.19)"/>
+    <rect class="cls-5" x="337.91" y="221.14" width="54.67" height="84.42" transform="translate(766.39 58.82) rotate(117.19)"/>
+    <rect class="cls-5" x="101.51" y="129.56" width="107.82" height="30.47" transform="translate(355.24 72.72) rotate(117.19)"/>
+    <rect class="cls-5" x="174.88" y="66.13" width="15.44" height="46.68" transform="translate(345.63 -32.06) rotate(117.19)"/>
+    <line class="cls-5" x1="203.36" y1="100.14" x2="161.84" y2="78.81"/>
+    <rect class="cls-5" x="175.19" y="48.35" width="43.9" height="30.47" transform="translate(343.79 -82.71) rotate(117.19)"/>
+    <rect class="cls-5" x="195.14" y="18.04" width="43.9" height="12.9" transform="translate(338.07 -157.41) rotate(117.19)"/>
+  </g>
+  <g id="Layer_8" data-name="Layer 8">
+    <circle class="cls-5" cx="609.76" cy="393.48" r="32.51"/>
+    <circle class="cls-5" cx="609.76" cy="393.48" r="49.69"/>
+    <rect class="cls-5" x="416.23" y="264.92" width="54.67" height="77.33" transform="translate(916.3 47.78) rotate(117.19)"/>
+    <path class="cls-5" d="M494.6,289.63c-10.55-5.42-7.05-12.23-7.05-12.23l-47.84-24.58s-3.5,6.81-14.05,1.39"/>
+    <path class="cls-5" d="M461.59,353.88c-10.55-5.42-14.05,1.39-14.05,1.39l-47.84-24.58s3.5-6.81-7.05-12.23"/>
+    <rect class="cls-19" x="369.76" y="281.16" width="72.24" height="7" transform="translate(844.56 53.71) rotate(117.19)"/>
+    <rect class="cls-19" x="288.14" y="239.25" width="72.24" height="7" transform="translate(688.35 65.26) rotate(117.19)"/>
+    <rect class="cls-5" x="172.29" y="141.2" width="72.24" height="84.42" transform="translate(466.8 81.85) rotate(117.19)"/>
+    <rect class="cls-5" x="181.09" y="140.78" width="54.67" height="84.42" transform="translate(466.45 81.23) rotate(117.19)"/>
+    <rect class="cls-5" x="259.41" y="184.57" width="54.67" height="77.33" transform="translate(616.35 70.19) rotate(117.19)"/>
+    <path class="cls-5" d="M337.79,209.27c-10.55-5.42-7.05-12.23-7.05-12.23l-47.84-24.58s-3.5,6.81-14.05,1.39"/>
+    <path class="cls-5" d="M304.78,273.53c-10.55-5.42-14.05,1.39-14.05,1.39l-47.84-24.58s3.5-6.81-7.05-12.23"/>
+    <rect class="cls-19" x="212.95" y="200.8" width="72.24" height="7" transform="translate(544.62 76.12) rotate(117.19)"/>
+    <rect class="cls-19" x="131.32" y="158.89" width="72.24" height="7" transform="translate(388.41 87.66) rotate(117.19)"/>
+    <rect class="cls-5" x="82.92" y="102.03" width="54.67" height="61.05" transform="translate(278.56 95.06) rotate(117.19)"/>
+    <rect class="cls-5" x="22.55" y="62.04" width="51.05" height="77.33" transform="translate(159.62 103.96) rotate(117.19)"/>
+    <path class="cls-5" d="M95.27,94.22c-10.55-5.42-7.05-12.23-7.05-12.23l-47.84-24.58s-3.5,6.81-14.05,1.39"/>
+    <path class="cls-5" d="M70.39,142.65c-10.55-5.42-14.05,1.39-14.05,1.39L8.49,119.47s3.5-6.81-7.05-12.23"/>
+    <g>
+      <polyline class="cls-5" points="629.48 408.09 655.66 421.54 662.04 409.13 628.84 392.07"/>
+      <rect class="cls-5" x="650.61" y="412.14" width="26.83" height="11.58" transform="translate(1339.2 18.28) rotate(117.19)"/>
+      <line class="cls-5" x1="670.15" y1="406" x2="657.89" y2="429.86"/>
+      <rect class="cls-5" x="662.06" y="403.85" width="3.25" height="1.3" transform="translate(1326.77 -.98) rotate(117.19)"/>
+      <rect class="cls-5" x="651.28" y="424.83" width="3.25" height="1.3" transform="translate(1329.72 39.17) rotate(117.19)"/>
+      <rect class="cls-5" x="675.04" y="409.19" width="1.62" height="1.3" transform="translate(1349.24 -4.03) rotate(117.19)"/>
+      <rect class="cls-5" x="663.52" y="431.61" width="1.62" height="1.3" transform="translate(1352.4 38.88) rotate(117.19)"/>
+    </g>
+    <g>
+      <line class="cls-5" x1="597.08" y1="331.9" x2="623.9" y2="332.61"/>
+      <g>
+        <polyline class="cls-5" points="617.04 373.79 617.37 338.22 603.42 337.86 604.39 365.7"/>
+        <rect class="cls-5" x="597.08" y="326.47" width="26.83" height="11.58" transform="translate(8.9 -15.86) rotate(1.5)"/>
+        <rect class="cls-5" x="596.91" y="337.73" width="3.25" height="1.3" transform="translate(9.06 -15.55) rotate(1.5)"/>
+        <rect class="cls-5" x="620.49" y="338.35" width="3.25" height="1.3" transform="translate(9.09 -16.17) rotate(1.5)"/>
+        <rect class="cls-5" x="597.26" y="324.45" width="1.62" height="1.3" transform="translate(8.71 -15.54) rotate(1.5)"/>
+        <rect class="cls-5" x="622.46" y="325.11" width="1.62" height="1.3" transform="translate(8.74 -16.2) rotate(1.5)"/>
+      </g>
+    </g>
+  </g>
+  <g id="Layer_19" data-name="Layer 19">
+    <g id="Layer_27" data-name="Layer 27">
+      <rect class="cls-11" x="705.11" y="737.12" width="36.54" height="39.7" transform="translate(1727.26 459.45) rotate(117.19)"/>
+      <line class="cls-11" x1="672.37" y1="705.5" x2="656.69" y2="701.74"/>
+      <line class="cls-11" x1="651" y1="744.85" x2="639.97" y2="733.45"/>
+    </g>
+    <g id="Layer_24" data-name="Layer 24">
+      <polyline class="cls-3" points="714.19 718.84 712.47 708.85 706.4 710.81 704.46 704.76 698.13 706.79 696.11 700.51 690.57 702.29 688.68 696.4 682.52 698.38 680.79 693 677.63 694.02 671.97 705.03 673.4 709.48 677.62 708.13 678.98 712.36 683.27 710.98 684.75 715.56 689.33 714.09 690.66 718.25 695.09 716.83 696.65 721.69 700.97 720.3 702.26 724.3 706.48 722.95"/>
+      <polyline class="cls-3" points="689.38 769.33 678 775.96 676.05 769.89 670 771.83 667.96 765.5 661.69 767.52 659.91 761.98 654.02 763.87 652.04 757.71 646.66 759.44 645.64 756.27 651.3 745.26 655.75 743.83 657.11 748.05 661.34 746.69 662.72 750.99 667.31 749.51 668.78 754.09 672.94 752.76 674.36 757.18 679.22 755.62 680.61 759.94 684.6 758.66 685.96 762.88"/>
+      <rect class="cls-3" x="707.84" y="736.69" width="30.57" height="40.28" transform="translate(1726.76 459.49) rotate(117.19)"/>
+    </g>
+    <g id="Layer_25" data-name="Layer 25">
+      <path class="cls-5" d="M711.35,715.03s-15.86,15.6-1.82,25.41"/>
+      <path class="cls-5" d="M682.5,771.7s5.66-20.61,18.23-14.06"/>
+    </g>
+    <g id="Layer_20" data-name="Layer 20">
+      <rect class="cls-5" x="681.89" y="728.85" width="11.46" height="20.87" transform="translate(1659.43 465.49) rotate(117.19)"/>
+      <rect class="cls-5" x="619.72" y="719.42" width="77.69" height="7.34" transform="translate(1602.69 467.75) rotate(117.19)"/>
+      <line class="cls-5" x1="681.38" y1="700.76" x2="669.14" y2="694.47"/>
+      <line class="cls-5" x1="653.48" y1="755.07" x2="641.24" y2="748.78"/>
+      <path class="cls-5" d="M710.14,715.53s12.26,.22-.71,25.09l-8.91,17.34s-8.71,15.96-19.5,13.49"/>
+    </g>
+    <g id="Layer_21" data-name="Layer 21">
+      <rect class="cls-17" x="657.4" y="720.46" width="25.68" height="20.29" transform="translate(1626.38 468.32) rotate(117.19)"/>
+      <rect class="cls-17" x="658.16" y="721.82" width="20.18" height="16.05" transform="translate(1622.8 468.98) rotate(117.19)"/>
+    </g>
+    <g id="Layer_23" data-name="Layer 23">
+      <rect class="cls-10" x="655.57" y="721.69" width="16.62" height="11.69" transform="translate(1614.4 469.5) rotate(117.19)"/>
+    </g>
+  </g>
+  <g id="Layer_29" data-name="Layer 29">
+    <line class="cls-5" x1="545.61" y1="700.28" x2="568.45" y2="751.18"/>
+    <rect class="cls-11" x="473.93" y="772.97" width="59.14" height="6.12" transform="translate(1280.57 1277.91) rotate(155.83)"/>
+    <polyline class="cls-11" points="459.84 766.66 469.41 787.98 480.5 783 470.95 761.73"/>
+    <line class="cls-11" x1="524.01" y1="763.47" x2="516.91" y2="747.64"/>
+    <rect class="cls-7" x="511.93" y="753.47" width="8.25" height="4.74" transform="translate(1296.34 1234.16) rotate(155.83)"/>
+    <rect class="cls-7" x="504.65" y="760.66" width="14.22" height="5.94" transform="translate(1291.3 1250.8) rotate(155.83)"/>
+    <line class="cls-13" x1="511.74" y1="756.28" x2="504.48" y2="759.54"/>
+    <line class="cls-6" x1="499.68" y1="748.84" x2="507.87" y2="767.09"/>
+    <line class="cls-12" x1="498.88" y1="747.05" x2="499.68" y2="748.84"/>
+    <rect class="cls-11" x="453.26" y="726.91" width="59.14" height="6.12" transform="translate(1222.18 1198.28) rotate(155.83)"/>
+    <polyline class="cls-11" points="460.81 768.8 451.24 747.49 462.33 742.51 471.87 763.78"/>
+    <polyline class="cls-11" points="518.03 736.54 505.99 741.94 509.95 750.77 521.99 745.37"/>
+    <line class="cls-11" x1="505.84" y1="722.99" x2="512.95" y2="738.82"/>
+    <rect class="cls-7" x="502.13" y="731.63" width="8.25" height="4.74" transform="translate(1268.65 1196.4) rotate(155.83)"/>
+    <rect class="cls-7" x="490.48" y="729.07" width="14.22" height="5.94" transform="translate(1251.27 1196.2) rotate(155.83)"/>
+    <line class="cls-19" x1="493.3" y1="734.62" x2="502.22" y2="754.49"/>
+    <line class="cls-13" x1="503.05" y1="736.94" x2="495.8" y2="740.19"/>
+    <line class="cls-6" x1="505.5" y1="761.8" x2="500.6" y2="750.89"/>
+    <polyline class="cls-5" points="500.14 749.87 485.08 756.62 476.99 760.25"/>
+    <polyline class="cls-5" points="483.56 768.56 489.64 754.58 475.45 749.93"/>
+    <line class="cls-11" x1="565.07" y1="745.05" x2="577.8" y2="735.15"/>
+    <polyline class="cls-5" points="533.42 770.48 537.41 774.27 539.68 768.31 545.62 770.57 547.98 764.36 554.14 766.7 556.21 761.27 562 763.47 564.3 757.42 569.58 759.43 570.76 756.32 565.69 745.02 561.32 743.36 559.74 747.5 555.59 745.92 553.98 750.14 549.48 748.43 547.77 752.92 543.69 751.37 542.04 755.71 537.26 753.9 535.65 758.14 531.73 756.65 529.65 762.11"/>
+    <polyline class="cls-5" points="538.56 731.34 541.02 736.82 521.99 745.37 519.52 739.88"/>
+    <polyline class="cls-5" points="562.67 720.38 579.2 757.22 572.51 760.22"/>
+    <line class="cls-5" x1="563.15" y1="755.04" x2="575.7" y2="749.41"/>
+    <polyline class="cls-16" points="537.52 731.81 542.79 743.57 561.31 735.26"/>
+    <polyline class="cls-10" points="558.56 722.42 561.89 729.84 551.22 734.63 547.89 727.21"/>
+    <polyline class="cls-10" points="547.89 727.21 549.81 731.49 539.46 736.14 537.52 731.81"/>
+    <line class="cls-5" x1="544.05" y1="734.57" x2="547.2" y2="741.59"/>
+    <line class="cls-11" x1="546.9" y1="704.56" x2="562.76" y2="701.63"/>
+    <polyline class="cls-5" points="506.86 711.3 506.68 705.8 512.65 708.07 514.91 702.13 521.12 704.49 523.46 698.33 528.9 700.4 531.1 694.62 537.15 696.92 539.16 691.64 542.26 692.82 547.33 704.12 545.67 708.49 541.53 706.91 539.95 711.07 535.73 709.46 534.02 713.96 529.52 712.25 527.97 716.34 523.62 714.68 521.81 719.46 517.56 717.84 516.07 721.76 510.61 719.68"/>
+    <polyline class="cls-5" points="539.52 733.48 537.06 728 518.03 736.54 520.49 742.02"/>
+    <polyline class="cls-5" points="563.74 722.75 547.21 685.92 540.51 688.92"/>
+    <line class="cls-5" x1="538.16" y1="699.36" x2="550.71" y2="693.72"/>
+    <polyline class="cls-16" points="538.48 733.95 533.2 722.19 551.71 713.88"/>
+    <polyline class="cls-10" points="559.48 724.47 556.15 717.04 545.48 721.83 548.81 729.26"/>
+    <polyline class="cls-10" points="548.81 729.26 546.89 724.97 536.54 729.62 538.48 733.95"/>
+    <line class="cls-5" x1="540.75" y1="727.23" x2="537.61" y2="720.21"/>
+    <line class="cls-5" x1="519.66" y1="739.82" x2="533.71" y2="771.13"/>
+    <line class="cls-5" x1="520.62" y1="741.96" x2="506.57" y2="710.65"/>
+    <line class="cls-12" x1="556.05" y1="723.54" x2="563.35" y2="739.82"/>
+    <line class="cls-8" x1="572.51" y1="760.22" x2="563.35" y2="739.82"/>
+    <line class="cls-8" x1="533.42" y1="770.48" x2="526.98" y2="756.14"/>
+    <line class="cls-12" x1="556.97" y1="725.6" x2="549.67" y2="709.32"/>
+    <line class="cls-8" x1="540.51" y1="688.92" x2="549.67" y2="709.32"/>
+    <line class="cls-8" x1="506.86" y1="711.3" x2="513.3" y2="725.65"/>
+  </g>
+  <g id="Layer_36" data-name="Layer 36">
+    <path class="cls-2" d="M613.6,726.01l12,.24s8.89-6.83,10.63-10.94c0,0-11.88-5.12-19.79-37l-2.98,.19,.14,47.51Z"/>
+    <path class="cls-1" d="M616.45,678.31l3.33-.79s1.81,18.13,11.96,26.24l4.49,11.54"/>
+    <path class="cls-2" d="M649.88,703.88s-2.44,4.5-5.2,5.13c0,0-13.44-9.06-17.54-32.34,0,0,7.26-2.34,9.13-2.54,0,0,3.18,4.71,3.7,6.29l-2.82,2.2,2.53,5.62,3.54-.19,6.65,15.82Z"/>
+    <path class="cls-2" d="M606.24,726.31l-12,.11s-8.82-6.93-10.52-11.05c0,0,11.93-4.99,20.17-36.79l2.98,.22-.63,47.5Z"/>
+    <path class="cls-1" d="M603.89,678.59l-3.32-.82s-1.99,18.11-12.23,26.12l-4.61,11.49"/>
+    <path class="cls-2" d="M570.2,703.81s2.39,4.52,5.15,5.19c0,0,13.54-8.92,17.87-32.16,0,0-7.24-2.42-9.11-2.63,0,0-3.23,4.68-3.77,6.26l2.8,2.23-2.59,5.59-3.54-.22-6.82,15.75Z"/>
+    <rect class="cls-4" x="609.52" y="559.49" width="16.07" height="4.89" transform="translate(1181 -54.25) rotate(90.14)"/>
+    <rect class="cls-4" x="595.8" y="559.46" width="16.07" height="4.89" transform="translate(1167.21 -40.56) rotate(90.14)"/>
+    <rect class="cls-4" x="609.68" y="492.56" width="16.07" height="4.89" transform="translate(1114.23 -121.51) rotate(90.14)"/>
+    <rect class="cls-4" x="595.87" y="492.53" width="16.07" height="4.89" transform="translate(1100.35 -107.73) rotate(90.14)"/>
+    <rect class="cls-4" x="601.02" y="527.02" width="33.23" height="4.89" transform="translate(1148.6 -86.88) rotate(90.14)"/>
+    <rect class="cls-4" x="587.21" y="526.99" width="33.23" height="4.89" transform="translate(1134.72 -73.1) rotate(90.14)"/>
+    <rect class="cls-18" x="599.43" y="449.82" width="22.2" height="6.76" transform="translate(1225.54 900.31) rotate(179.43)"/>
+    <rect class="cls-18" x="599.26" y="615.64" width="22.2" height="6.76" transform="translate(1226.84 1231.95) rotate(179.43)"/>
+    <line class="cls-22" x1="624.2" y1="446.31" x2="596.13" y2="446.92"/>
+  </g>
+  <g id="Layer_37" data-name="Layer 37">
+    <line class="cls-22" x1="624.94" y1="460.19" x2="596.87" y2="460.79"/>
+    <line class="cls-22" x1="625.61" y1="481.56" x2="597.54" y2="482.17"/>
+    <line class="cls-22" x1="625.37" y1="507.77" x2="597.3" y2="508.37"/>
+    <line class="cls-22" x1="626.23" y1="550.06" x2="598.16" y2="550.67"/>
+    <line class="cls-22" x1="625.99" y1="576.27" x2="597.92" y2="576.87"/>
+    <line class="cls-22" x1="625.09" y1="594.61" x2="597.02" y2="595.22"/>
+    <line class="cls-22" x1="624.33" y1="611.9" x2="596.26" y2="612.51"/>
+    <line class="cls-22" x1="624.35" y1="626.62" x2="596.28" y2="627.23"/>
+    <line class="cls-11" x1="606.71" y1="610.75" x2="606.61" y2="600.82"/>
+    <line class="cls-11" x1="615.03" y1="610.75" x2="614.94" y2="600.82"/>
+    <ellipse class="cls-1" cx="610.72" cy="471.8" rx="10.43" ry="5.52" transform="translate(-22.38 30.48) rotate(-2.81)"/>
+  </g>
+  <g id="Layer_38" data-name="Layer 38">
+    <rect class="cls-12" x="427.44" y="275.87" width="8.02" height="15.46" transform="translate(880.87 29.44) rotate(117.19)"/>
+    <rect class="cls-12" x="387.13" y="243.98" width="7.06" height="36.26" transform="translate(802.33 34.4) rotate(117.19)"/>
+    <rect class="cls-12" x="344.34" y="232.87" width="8.02" height="15.46" transform="translate(721.54 40.7) rotate(117.19)"/>
+    <rect class="cls-12" x="415.39" y="299.77" width="8.02" height="15.46" transform="translate(884.56 74.98) rotate(117.19)"/>
+    <rect class="cls-12" x="375.08" y="267.88" width="7.06" height="36.26" transform="translate(806.03 79.94) rotate(117.19)"/>
+    <rect class="cls-12" x="332.29" y="256.76" width="8.02" height="15.46" transform="translate(725.24 86.23) rotate(117.19)"/>
+    <rect class="cls-12" x="267.37" y="193.19" width="8.02" height="15.46" transform="translate(574.1 51.35) rotate(117.19)"/>
+    <rect class="cls-12" x="255.32" y="217.09" width="8.02" height="15.46" transform="translate(577.8 96.89) rotate(117.19)"/>
+    <rect class="cls-12" x="72.06" y="92.85" width="8.02" height="15.46" transform="translate(200.29 78.88) rotate(117.19)"/>
+    <rect class="cls-12" x="60.01" y="116.74" width="8.02" height="15.46" transform="translate(203.99 124.42) rotate(117.19)"/>
+    <rect class="cls-12" x="27.33" y="70.29" width="8.02" height="15.46" transform="translate(115.05 85.8) rotate(117.19)"/>
+    <rect class="cls-12" x="15.28" y="94.19" width="8.02" height="15.46" transform="translate(118.75 131.34) rotate(117.19)"/>
+    <line class="cls-15" x1="445.31" y1="282.07" x2="426.45" y2="318.78"/>
+    <line class="cls-15" x1="483.18" y1="301.69" x2="464.39" y2="338.27"/>
+    <line class="cls-15" x1="451.61" y1="331.7" x2="470.4" y2="295.13"/>
+    <line class="cls-15" x1="424.85" y1="271.73" x2="406.05" y2="308.3"/>
+    <line class="cls-15" x1="368.01" y1="242.53" x2="349.22" y2="279.1"/>
+    <line class="cls-15" x1="264.94" y1="189.57" x2="246.15" y2="226.15"/>
+    <line class="cls-15" x1="283.43" y1="199.07" x2="264.63" y2="235.64"/>
+    <line class="cls-15" x1="294.14" y1="204.58" x2="275.35" y2="241.15"/>
+    <line class="cls-15" x1="316.3" y1="215.96" x2="297.5" y2="252.53"/>
+    <line class="cls-15" x1="88.11" y1="98.72" x2="69.32" y2="135.3"/>
+    <line class="cls-15" x1="70.78" y1="89.82" x2="51.99" y2="126.39"/>
+    <line class="cls-15" x1="45.87" y1="123.25" x2="64.66" y2="86.67"/>
+    <line class="cls-15" x1="25.91" y1="66.77" x2="7.12" y2="103.34"/>
+    <line class="cls-15" x1="43.66" y1="75.88" x2="24.87" y2="112.46"/>
+    <line class="cls-15" x1="50.38" y1="79.34" x2="31.59" y2="115.92"/>
+    <line class="cls-5" x1="141.97" y1="148.94" x2="159.92" y2="158.17"/>
+    <line class="cls-5" x1="146.48" y1="162.33" x2="155.7" y2="144.38"/>
+    <rect class="cls-11" x="194.46" y="169.4" width="28.59" height="28.59" transform="translate(467.54 81.95) rotate(117.19)"/>
+    <line class="cls-11" x1="203.42" y1="170.51" x2="194.85" y2="187.19"/>
+    <line class="cls-11" x1="206.96" y1="172.36" x2="198.4" y2="189.04"/>
+    <line class="cls-11" x1="210.41" y1="174.13" x2="201.84" y2="190.81"/>
+    <line class="cls-11" x1="208.49" y1="186.09" x2="205.18" y2="192.52"/>
+    <line class="cls-11" x1="213.75" y1="175.85" x2="210.48" y2="182.21"/>
+    <line class="cls-11" x1="212.04" y1="187.92" x2="208.73" y2="194.37"/>
+    <line class="cls-11" x1="217.29" y1="177.7" x2="214.03" y2="184.04"/>
+    <line class="cls-11" x1="215.49" y1="189.69" x2="212.17" y2="196.14"/>
+    <line class="cls-11" x1="220.74" y1="179.47" x2="217.48" y2="185.81"/>
+    <rect class="cls-11" x="27.39" y="96.74" width="41.12" height="8.94" transform="translate(159.89 104.8) rotate(117.19)"/>
+    <line class="cls-1" x1="52.77" y1="92.24" x2="48.27" y2="101.01"/>
+    <rect class="cls-1" x="32.76" y="107.5" width="21.06" height="5.16" transform="translate(160.99 121.89) rotate(117.19)"/>
+    <rect class="cls-11" x="436.03" y="303.29" width="26.76" height="9.17" transform="translate(928.63 48.83) rotate(117.19)"/>
+    <rect class="cls-11" x="451.67" y="293.74" width="5.3" height="9.17" transform="translate(927.29 30.55) rotate(117.19)"/>
+    <rect class="cls-11" x="453.6" y="292.56" width="2.65" height="9.17" transform="translate(927.12 28.3) rotate(117.19)"/>
+    <rect class="cls-11" x="449.11" y="298.72" width="5.3" height="9.17" transform="translate(927.99 40.09) rotate(117.19)"/>
+    <rect class="cls-11" x="451.04" y="297.54" width="2.65" height="9.17" transform="translate(927.82 37.83) rotate(117.19)"/>
+    <rect class="cls-11" x="446.58" y="303.76" width="5.3" height="9.17" transform="translate(928.78 49.67) rotate(117.19)"/>
+    <rect class="cls-11" x="448.51" y="302.58" width="2.65" height="9.17" transform="translate(928.61 47.42) rotate(117.19)"/>
+    <rect class="cls-18" x="453.92" y="313.16" width="26.85" height="7.95" transform="translate(962.99 46.37) rotate(117.19)"/>
+    <line class="cls-20" x1="281.14" y1="210.57" x2="286.17" y2="213.16"/>
+    <line class="cls-20" x1="272.62" y1="227.14" x2="277.66" y2="229.73"/>
+    <rect class="cls-18" x="298.86" y="233.99" width="26.75" height="7.03" transform="translate(666.18 68.31) rotate(117.19)"/>
+    <rect class="cls-18" x="24.14" y="94.12" width="26.65" height="4.3" transform="translate(140.21 106.95) rotate(117.19)"/>
+    <line class="cls-20" x1="61.12" y1="97.41" x2="64.05" y2="98.91"/>
+    <line class="cls-20" x1="52.56" y1="114.08" x2="55.48" y2="115.58"/>
+    <rect class="cls-1" x="277.21" y="222.75" width="26.39" height="6.65" transform="translate(624.2 71.09) rotate(117.19)"/>
+    <ellipse class="cls-1" cx="300.86" cy="231.14" rx="13.83" ry="3.9" transform="translate(-42.22 393.12) rotate(-62.81)"/>
+    <line class="cls-1" x1="294.77" y1="217.58" x2="286.2" y2="234.25"/>
+    <rect class="cls-11" x="591.73" y="821.66" width="36.54" height="39.7" transform="translate(1209.83 1690.29) rotate(-179.31)"/>
+    <line class="cls-11" x1="633.3" y1="772.89" x2="629.67" y2="746.18"/>
+    <line class="cls-11" x1="588.55" y1="771.32" x2="592.83" y2="747.36"/>
+    <polyline class="cls-3" points="640.02 816.27 648.19 810.27 643.73 805.71 648.28 801.27 643.63 796.52 648.35 791.91 644.29 787.75 648.72 783.42 644.2 778.79 648.24 774.85 645.92 772.47 633.54 772.32 630.19 775.59 633.29 778.76 630.1 781.86 633.26 785.09 629.81 788.46 633.17 791.9 630.05 794.95 633.29 798.28 629.64 801.84 632.81 805.09 629.81 808.02 632.9 811.2"/>
+    <polyline class="cls-3" points="583.76 816.59 572.75 809.37 577.31 804.91 572.88 800.37 577.63 795.72 573.03 791 577.19 786.94 572.87 782.51 577.5 777.99 573.55 773.95 575.93 771.63 588.31 771.78 591.58 775.12 588.41 778.22 591.51 781.4 588.28 784.55 591.65 788 588.2 791.36 591.26 794.48 587.93 797.73 591.5 801.38 588.25 804.56 591.18 807.56 588.01 810.66"/>
+    <rect class="cls-3" x="594.72" y="821.07" width="30.57" height="40.28" transform="translate(1209.84 1689.71) rotate(-179.31)"/>
+    <path class="cls-5" d="M642.16,812.02s-21.04-7.23-23.55,9.71"/>
+    <path class="cls-5" d="M578.57,811.49s20.97-4.13,20.72,10.04"/>
+    <rect class="cls-5" x="604.14" y="791.18" width="11.46" height="20.87" transform="translate(1210.05 1610.52) rotate(-179.31)"/>
+    <rect class="cls-5" x="572.55" y="764.72" width="77.69" height="7.34" transform="translate(1213.49 1544.07) rotate(-179.31)"/>
+    <line class="cls-5" x1="641.56" y1="778.84" x2="641.72" y2="765.08"/>
+    <line class="cls-5" x1="580.51" y1="778.1" x2="580.67" y2="764.35"/>
+    <path class="cls-5" d="M641.17,811.17s5.27,11.07-22.77,10.56l-19.5-.23s-18.17-.68-20.77-11.43"/>
+    <rect class="cls-17" x="597.03" y="772.04" width="25.68" height="20.29" transform="translate(1210.29 1571.65) rotate(-179.31)"/>
+    <rect class="cls-17" x="599.58" y="772.03" width="20.18" height="16.05" transform="translate(1209.91 1567.4) rotate(-179.31)"/>
+    <rect class="cls-10" x="601.47" y="769.28" width="16.62" height="11.69" transform="translate(1210.2 1557.54) rotate(-179.31)"/>
+    
+    <g id="laser_TO_CHANGE_COLOR">
+      <g>
+        <line class="cls-23" x1="597.79" y1="675.6" x2="595.15" y2="685.58">
+          <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+        </line>
+        <line class="cls-21" x1="593.81" y1="690.51" x2="590.94" y2="696.02">
+          <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+        </line>
+        <line class="cls-21" x1="589.2" y1="699.11" x2="580.86" y2="709.16">
+          <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+        </line>
+        <g>
+          <rect class="cls-21" x="710.84" y="737.35" width="24.84" height="39.7" transform="translate(1727.29 459.91) rotate(117.19)">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </rect>
+          <rect class="cls-21" x="722.14" y="764.74" width="42.39" height="5.35" transform="translate(1765.62 456.93) rotate(117.19)">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </rect>
+          <g id="LASER_BOTTOM">
+            <line class="cls-9" x1="506.98" y1="765.11" x2="498.07" y2="745.24">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <polyline class="cls-21" points="504.48 759.54 513.69 755.41 517.35 763.56">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <line class="cls-21" x1="500.6" y1="750.89" x2="492.42" y2="732.64">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <polyline class="cls-21" points="495.8 740.19 505.01 736.06 501.35 727.91">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <line class="cls-21" x1="479.4" y1="759.3" x2="574.8" y2="716.49">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <polyline class="cls-21" points="483.96 767.65 489.64 754.71 476.52 750.47">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <polyline class="cls-21" points="537.52 731.81 542.79 743.57 561.31 735.26">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <polyline class="cls-21" points="538.48 733.95 533.2 722.19 551.71 713.88">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <!-- <animate
+                attributeType="XML"
+                attributeName="stroke"
+                values="#FF299E;#67FF2E"
+                dur="0.8s"
+                repeatCount="indefinite"
+            /> -->
+          </g>
+          <g id="LASER_TOP">
+            <line class="cls-21" x1="645.29" y1="717.53" x2="756.67" y2="774.76">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-21" x1="639.54" y1="708.81" x2="632.19" y2="699.54">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-21" x1="629.32" y1="696.09" x2="626.38" y2="690.11">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-23" x1="624.8" y1="685.35" x2="622.95" y2="675.6">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+          </g>
+          <g id="LASER_BEAM">
+            <line class="cls-14" x1="610.44" y1="626.92" x2="609.89" y2="755.34">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-14" x1="610.47" y1="575.63" x2="610.45" y2="619.8">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-14" x1="610.48" y1="553.69" x2="610.48" y2="564.38">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <line class="cls-14" x1="610.51" y1="500.76" x2="610.49" y2="545.83">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+            <polyline class="cls-14" points="610.55 430.44 610.53 472.92 610.53 479.27 610.52 488.26">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </polyline>
+            <path class="cls-14" d="M610.55,430.44v-13.81c0-15.15-8.23-29.1-21.48-36.44l-17.7-9.8L172.42,164.95">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+            <line class="cls-14" x1="136.06" y1="145.91" x2="15.51" y2="84.31">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+          </g>
+          <rect class="cls-21" x="597.31" y="821.65" width="24.84" height="39.7" transform="translate(1209.29 1690.28) rotate(-179.31)">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </rect>
+          <rect class="cls-21" x="588.36" y="861.35" width="42.39" height="5.35" transform="translate(1208.67 1735.33) rotate(-179.31)">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </rect>
+          <g id="LASER_TOP-2" data-name="LASER_TOP">
+            <line class="cls-21" x1="609.9" y1="753.45" x2="608.93" y2="879.24">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+          </g>
+        </g>
+      </g>
+      <path class="cls-14" d="M603.89,488.45v-72.34c0-12.59-7.01-24.13-18.17-29.93-4.43-2.3-8.86-4.6-13.28-6.91l-.28-.2L173.21,173.63l-4.22-2.17">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <path class="cls-14" d="M603.89,544.9v-43.34">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <path class="cls-14" d="M603.89,563.32v-10.32">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <path class="cls-14" d="M602.89,619.77c0-14.84,.61-29.42,.88-44.14">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <path class="cls-14" d="M618.53,619.78c0-14.84-.61-29.42-.88-44.14">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <path class="cls-14" d="M598.2,673l3.39-15.8c.04-.16,.06-.33,.07-.5l1.23-29.64">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <line class="cls-14" x1="132.18" y1="152.48" x2="12.05" y2="90.55">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+      <path class="cls-14" d="M617.81,488.45l.08-27.74v-44.68h0c0-18.12-10.08-34.73-26.16-43.09l-5.3-2.75">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <line class="cls-14" x1="617.64" y1="545.17" x2="617.77" y2="501.56">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+      <line class="cls-14" x1="617.64" y1="563.24" x2="617.64" y2="553">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+      <path class="cls-14" d="M622.2,672.92l-2.71-15.81c-.04-.21-.06-.42-.07-.64l-.63-29.55">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </path>
+      <line class="cls-14" x1="138.94" y1="140.13" x2="18.56" y2="78.86">
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+          </line>
+      <polyline class="cls-14" points="586.44 370.27 187.49 164.83 175.77 158.86">>
+            <animate attributeType="CSS" attributeName="stroke" values='#FF299E;#27FFFF;#FF299E' dur="1.2" repeatCount="indefinite" />
+        <!-- <animate
+          attributeType=".cls-23" 
+          attributeName="stroke" 
+          values='#FF299E;#27FFFF;#FF299E' 
+          dur="1.2" 
+          repeatCount="indefinite"
+        /> -->
+      </polyline>
+
+    </g>
+
+  </g>
+  <!-- <animate
+    attributeType="laser_TO_CHANGE_COLOR" 
+    attributeName="stroke" 
+    values='#FF299E;#27FFFF;#FF299E' 
+    dur="1.2" 
+    repeatCount="indefinite"
+  /> -->
+  <!-- <g id="laser_TO_CHANGE_COLOR"> -->
+</svg>
