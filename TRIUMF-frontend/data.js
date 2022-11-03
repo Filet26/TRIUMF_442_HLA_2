@@ -106,8 +106,6 @@ async function mapData(data) {
       row.className = "original";
     }
 
-    tableBody.appendChild(row);
-
     // create table cells
 
     const nameRow = document.createElement("td");
@@ -135,6 +133,8 @@ async function mapData(data) {
     // map the units
     tableCell.textContent += listUnitsDict[index][1];
     row.appendChild(tableCell);
+
+    tableBody.appendChild(row);
   }
 }
 
@@ -150,7 +150,7 @@ async function updateSecondColumnTableValues() {
   const tableBody = document.querySelector("tbody");
   const tableRows = tableBody.querySelectorAll("tr");
   tableRows.forEach((row, index) => {
-    const tableCell = row.querySelector("td:nth-child(3)");
+    const tableCell = row.querySelector("td:nth-last-child(2)");
     tableCell.textContent = roundNum(listPVDict[index][1]);
   });
 }
