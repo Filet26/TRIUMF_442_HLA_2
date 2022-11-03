@@ -64,8 +64,8 @@ async function updateTwitterFontSize() {
     '.timeline-Tweet-text'
   );
   for (const node of elementList) {
-    node.style.fontSize = 'x-large';
-    node.style.lineHeight = '25px';
+    node.style.fontSize = '225%';
+    node.style.lineHeight = '28px';
   }
 }
 
