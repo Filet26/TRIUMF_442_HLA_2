@@ -20,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #007bdff9;
-  height: 95vh;
+  height: 90vh;
   width: 100%;
   margin: 0;
   align-items: stretch;
@@ -159,11 +159,16 @@ div.subSection {
   height: 65%;
 }
 
+footer {
+  justify-content: space-around;
+}
+
 div.smallContainer {
   display: flex;
   flex-direction: column;
   margin: 0px 5px 5px;
   width: 45%;
+  max-height: 100%;
 }
 
 h2.sectionTitle {
