@@ -91,7 +91,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: 'Interval (5s)',
+          text: 'Intervals (5s)',
           font: {
             size: 25
           }
