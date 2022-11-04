@@ -38,12 +38,13 @@ function fetchData() {
   return data;
 }
 
-// function removeFiller() {
-//   const fillerTableItems = document.querySelectorAll(".original");
-//   fillerTableItems.forEach((element) => {
-//     element.remove();
-//   });
-// }
+function removeFiller() {
+  //need filler to stop layout shift
+  const fillerTableItems = document.querySelectorAll('.dummyTable');
+  fillerTableItems.forEach((element) => {
+    element.remove();
+  });
+}
 
 // this function rounds the PV values
 // will also parse values using scientific notation (10.923e-09 -> 10.9e-09)
@@ -70,7 +71,7 @@ async function updateTwitterFontSize() {
 }
 
 async function mapData(data) {
-  // removeFiller();
+  removeFiller();
   const listPVDict = Object.entries(await getLocalOlisData());
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector('tbody');
@@ -204,6 +205,7 @@ async function setDiagramLabels() {
   let status = document.querySelector('.diagramLabelBeamStatus');
 
   if (aData > 400 && bData > 400 && cData == 1) {
+    document.querySelector('.diagram-img').src = './public/graphic_left.svg';
     document.querySelector('.diagramLabelBeamSource').innerHTML =
       'Beam Source: Surface Ion';
     document.querySelector('.diagramLabelBeamStatus').innerHTML =
@@ -211,6 +213,7 @@ async function setDiagramLabels() {
     return;
   }
   if (aData > 400 && bData > 400 && cData == 0) {
+    document.querySelector('.diagram-img').src = './public/graphic_right.svg';
     document.querySelector('.diagramLabelBeamSource').innerHTML =
       'Beam Source: Microwave';
     document.querySelector('.diagramLabelBeamStatus').innerHTML =
@@ -219,13 +222,14 @@ async function setDiagramLabels() {
     return;
   }
   if (aData <= 400 && bData <= 400) {
+    document.querySelector('.diagram-img').src = './public/graphic_mid.svg';
     document.querySelector('.diagramLabelBeamSource').innerHTML =
       'Beam Source: Multi-Charge Ion';
     document.querySelector('.diagramLabelBeamStatus').innerHTML =
       'Beam Status: ON';
     return;
   }
-
+  document.querySelector('.diagram-img').src = './public/graphic_none.svg';
   document.querySelector('.diagramLabelBeamSource').innerHTML =
     'Beam Source: None';
   document.querySelector('.diagramLabelBeamStatus').innerHTML =
