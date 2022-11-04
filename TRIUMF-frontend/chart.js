@@ -8,9 +8,23 @@ let cycles = 0;
 
 let index = 0;
 
+function round(num) {
+  let eIndex = num.indexOf("e");
+  if (eIndex == -1) {
+    ("");
+  } else {
+    let notation = num.substring(eIndex);
+    return notation;
+  }
+}
+
 function updateGraph() {
   const dataValue = document.getElementById("graph_data").innerText;
   dataArray.push(dataValue.slice(0, 5));
+
+  // updates charts units eg. Current(A) e-10
+  myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
+
   if (dataArray.length > 180) {
     dataArray.shift();
   }
@@ -107,7 +121,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: "Amps",
+          text: "Current (A)",
           font: {
             size: 25,
           },
