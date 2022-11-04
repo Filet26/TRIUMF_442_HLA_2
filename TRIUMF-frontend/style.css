@@ -13,15 +13,15 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
   display: flex;
   flex-direction: column;
   background-color: #007bdff9;
-  height: 95vh;
-  width: 100%;
+  height: 90vh;
+  width: 99.9vw;
   margin: 0;
   align-items: stretch;
   font-weight: 500;
@@ -33,10 +33,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 4vh;
 }
 
 .navText {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 nav p {
@@ -55,6 +56,10 @@ table {
   width: 100%;
   font-size: larger;
 }
+
+#twitterWidget {
+  overflow: hidden;
+}
 /* RIUMF LOGO */
 img.logo {
   height: auto;
@@ -64,7 +69,13 @@ img.logo {
 /* VOLTAGE GRAPH */
 img.graph {
   width: auto;
+  height: 95%;
+}
+
+.chartContainer {
   height: 100%;
+  width: 100%;
+  overflow-y: hidden;
 }
 
 /* MAIN DIAGRAM */
@@ -80,16 +91,16 @@ img.graph {
 
 .imageLabelContainer label.diagramLabelBeamSource {
   position: absolute;
-  left: 45%;
-  bottom: 9%;
+  right: 30%;
+  bottom: 25%;
   font-size: large;
   font-weight: 500;
 }
 
 .imageLabelContainer label.diagramLabelBeamStatus {
   position: absolute;
-  left: 45%;
-  bottom: 65%;
+  right: 30%;
+  bottom: 50%;
   font-size: large;
   font-weight: 500;
 }
@@ -97,7 +108,8 @@ img.graph {
 main {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  max-height: 100%;
+  margin-bottom: 1rem;
 }
 
 section {
@@ -112,14 +124,48 @@ section {
   width: 100%;
 }
 
-tr:nth-child(odd) {
+footer {
+  display: flex;
+  min-height: 15vh;
+  background-color: #007bdff9;
+}
+
+/* SLideshow */
+
+/* .slide {
+  display: none;
+} */
+
+/* tr:nth-child(odd) {
   background: #efefef;
 }
 tr:nth-child(even) {
   background: #fff;
 }
+ */
 th {
   background: #fff;
+  text-align: center;
+}
+
+td {
+  text-align: center;
+}
+
+.vacuum {
+  background-color: #dcecf1;
+}
+
+.mcis {
+  background-color: #dcecf1;
+}
+
+.aq {
+  background-color: #efefef;
+}
+
+.sis {
+  background-color: #efefef;
 }
 
 div.subSection {
@@ -127,7 +173,11 @@ div.subSection {
   flex-direction: row;
   background-color: #f5f5f5;
   width: 100%;
-  height: 70%;
+  height: 65%;
+}
+
+footer {
+  justify-content: space-around;
 }
 
 div.smallContainer {
@@ -135,6 +185,7 @@ div.smallContainer {
   flex-direction: column;
   margin: 0px 5px 5px;
   width: 45%;
+  max-height: 100%;
 }
 
 h2.sectionTitle {
@@ -165,6 +216,21 @@ canvas {
   }
   header {
     width: 100%;
+  }
+  .imageLabelContainer {
+    width: 100%;
+  }
+  img.logo {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navText {
+    padding: 5%;
   }
 }
 

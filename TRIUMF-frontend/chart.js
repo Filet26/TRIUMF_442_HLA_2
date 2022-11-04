@@ -2,25 +2,47 @@ const ctx = document.getElementById("myChart");
 
 let dataArray = [];
 
-let labelArray = Array.from({ length: 50 }, (x, i) => i + 5);
+let labelArray = Array.from({ length: 180 }, (x, i) => i + 5);
 
 let cycles = 0;
 
+let index = 0;
+
+function round(num) {
+  let eIndex = num.indexOf("e");
+  if (eIndex == -1) {
+    ("");
+  } else {
+    let notation = num.substring(eIndex);
+    return notation;
+  }
+}
+
 function updateGraph() {
   const dataValue = document.getElementById("graph_data").innerText;
-  dataArray.push(dataValue.slice(0, 2));
-  if (dataArray.length > 50) {
+  dataArray.push(dataValue.slice(0, 5));
+
+  // updates charts units eg. Current(A) e-10
+  myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
+
+  if (dataArray.length > 180) {
     dataArray.shift();
   }
   cycles++;
-  if (cycles > 50) {
+  if (cycles > 180) {
     updateLabel();
   }
 }
 
 function updateLabel() {
-  labelArray.push(Number(labelArray.at(-1)).toString());
-  labelArray.shift();
+  if (cycles > 180) {
+    labelArray.push(Number(labelArray[index]).toString());
+    if (index > 180) {
+      index = 0;
+    }
+    index++;
+    labelArray.shift();
+  }
 }
 
 setInterval(updateGraph, 5000);
@@ -41,14 +63,15 @@ const myChart = new Chart(ctx, {
           "rgba(153, 102, 255, 0.2)",
           "rgba(255, 159, 64, 0.2)",
         ],
-        borderColor: [
-          "rgba(255, 99, 132, 1)",
-          "rgba(54, 162, 235, 1)",
-          "rgba(255, 206, 86, 1)",
-          "rgba(75, 192, 192, 1)",
-          "rgba(153, 102, 255, 1)",
-          "rgba(255, 159, 64, 1)",
-        ],
+        // borderColor: [
+        //   "rgba(255, 99, 132, 1)",
+        //   "rgba(54, 162, 235, 1)",
+        //   "rgba(255, 206, 86, 1)",
+        //   "rgba(75, 192, 192, 1)",
+        //   "rgba(153, 102, 255, 1)",
+        //   "rgba(255, 159, 64, 1)",
+        // ],
+        borderColor: "#e8364",
         borderWidth: 1,
       },
     ],
@@ -61,7 +84,7 @@ const myChart = new Chart(ctx, {
       },
       title: {
         display: true,
-        text: "IOS:FC6:SCALECUR",
+        text: "Faraday Cup 6 (FC6) Current, per 5 Second Intervals",
         font: {
           size: 25,
         },
@@ -74,7 +97,7 @@ const myChart = new Chart(ctx, {
         },
         ticks: {
           font: {
-            size: 25,
+            size: 15,
           },
           callback: function (val, index) {
             // Hide every 2nd tick label
@@ -83,22 +106,22 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: "Interval (5s)",
+          text: "Intervals (5s)",
           font: {
-            size: 25,
+            size: 15,
           },
         },
       },
       y: {
-        beginAtZero: true,
+        beginAtZero: false,
         ticks: {
           font: {
-            size: 25,
+            size: 15,
           },
         },
         title: {
           display: true,
-          text: "Amperes",
+          text: "Current (A)",
           font: {
             size: 25,
           },
