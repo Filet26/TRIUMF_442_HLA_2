@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
@@ -33,6 +33,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  height: 4vh;
 }
 
 .navText {
@@ -128,6 +129,12 @@ footer {
   min-height: 15vh;
   background-color: #007bdff9;
 }
+
+/* SLideshow */
+
+/* .slide {
+  display: none;
+} */
 
 /* tr:nth-child(odd) {
   background: #efefef;
