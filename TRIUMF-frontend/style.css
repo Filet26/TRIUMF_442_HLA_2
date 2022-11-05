@@ -20,10 +20,10 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #007bdff9;
-  height: 90vh;
+  height: 100vh;
   width: 99.9vw;
+  max-width: 99.9vw;
   margin: 0;
-  align-items: stretch;
   font-weight: 500;
   overflow-x: hidden;
 }
@@ -32,7 +32,6 @@ main {
   display: flex;
   flex-direction: row;
   max-height: 90%;
-  margin-bottom: 1rem;
 }
 
 section {
@@ -43,45 +42,45 @@ section {
   justify-content: flex-start;
   position: relative;
   border: 5px solid #f5f5f5;
-  height: 100%;
-  width: 100%;
+  height: 97%;
+  max-height: fit-content;
+  width: 50%;
 }
 
 footer {
   display: flex;
-  min-height: 15vh;
+  height: 5%;
+  max-height: 5%;
   background-color: #007bdff9;
 }
 
 header {
-  height: 10%;
-}
-
-/* nav bar */
-nav {
+  height: 5%;
+  max-height: 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
 
+/* nav bar */
+
 .navText {
   font-size: 2rem;
 }
 
-nav p {
+header p {
   color: white;
   font-weight: 600;
 }
 
-nav h2 {
+header h2 {
   color: white;
 }
 
 table {
   background-color: #ffffff;
   border: 5px solid #ffffff;
-  margin: 0px 0px 5px;
   width: 100%;
   font-size: larger;
 }
@@ -102,7 +101,7 @@ img.graph {
 }
 
 .chartContainer {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   overflow-y: hidden;
 }
@@ -191,11 +190,10 @@ footer {
 }
 
 div.smallContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 5px 5px;
+  display: inline-block;
   width: 45%;
-  max-height: 100%;
+  height: 99%;
+  max-height: 99%;
 }
 
 h2.sectionTitle {
