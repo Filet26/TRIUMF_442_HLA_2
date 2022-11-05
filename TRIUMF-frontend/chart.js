@@ -1,4 +1,4 @@
-const ctx = document.getElementById("myChart");
+const ctx = document.getElementById('myChart');
 
 let dataArray = [];
 
@@ -9,9 +9,9 @@ let cycles = 0;
 let index = 0;
 
 function round(num) {
-  let eIndex = num.indexOf("e");
+  let eIndex = num.indexOf('e');
   if (eIndex == -1) {
-    ("");
+    ('');
   } else {
     let notation = num.substring(eIndex);
     return notation;
@@ -19,11 +19,11 @@ function round(num) {
 }
 
 function updateGraph() {
-  const dataValue = document.getElementById("graph_data").innerText;
+  const dataValue = document.getElementById('graph_data').innerText;
   dataArray.push(dataValue.slice(0, 5));
 
   // updates charts units eg. Current(A) e-10
-  myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
+  myChart.options.scales.y.title.text = 'Current (A) ' + round(dataValue);
 
   if (dataArray.length > 180) {
     dataArray.shift();
@@ -48,20 +48,21 @@ function updateLabel() {
 setInterval(updateGraph, 5000);
 
 const myChart = new Chart(ctx, {
-  type: "line",
+  type: 'line',
   data: {
     labels: labelArray,
     datasets: [
       {
-        label: "Voltage over 5 Second Intervals",
+        label: 'Voltage over 5 Second Intervals',
         data: dataArray,
+        fill: true,
         backgroundColor: [
-          "rgba(255, 99, 132, 0.2)",
-          "rgba(54, 162, 235, 0.2)",
-          "rgba(255, 206, 86, 0.2)",
-          "rgba(75, 192, 192, 0.2)",
-          "rgba(153, 102, 255, 0.2)",
-          "rgba(255, 159, 64, 0.2)",
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)'
         ],
         // borderColor: [
         //   "rgba(255, 99, 132, 1)",
@@ -71,64 +72,69 @@ const myChart = new Chart(ctx, {
         //   "rgba(153, 102, 255, 1)",
         //   "rgba(255, 159, 64, 1)",
         // ],
-        borderColor: "#e8364",
-        borderWidth: 1,
-      },
-    ],
+        borderColor: '#e8364',
+        borderWidth: 1
+      }
+    ]
   },
   options: {
     responsive: true,
+    elements: {
+      point: {
+        radius: 0
+      }
+    },
     plugins: {
       legend: {
-        display: false,
+        display: false
       },
       title: {
         display: true,
-        text: "Faraday Cup 6 (FC6) Current, per 5 Second Intervals",
+        text: 'Faraday Cup 6 (FC6) Current vs 5 Second Intervals',
         font: {
-          size: 25,
-        },
-      },
+          size: 25
+        }
+      }
     },
     scales: {
       x: {
         grid: {
-          display: false,
+          display: false
         },
         ticks: {
           font: {
-            size: 15,
+            size: 15
           },
           callback: function (val, index) {
             // Hide every 2nd tick label
-            return index % 2 === 0 ? this.getLabelForValue(val) : "";
-          },
+            return index % 2 === 0 ? this.getLabelForValue(val) : '';
+          }
         },
         title: {
           display: true,
-          text: "Intervals (5s)",
+          text: 'Intervals (5s)',
           font: {
-            size: 15,
-          },
-        },
+            size: 15
+          }
+        }
       },
       y: {
         beginAtZero: false,
         ticks: {
           font: {
-            size: 15,
-          },
+            size: 15
+          }
         },
         title: {
           display: true,
-          text: "Current (A)",
+          text: 'Current (A)',
           font: {
-            size: 25,
-          },
-        },
-      },
-    },
-  },
+            size: 25
+          }
+        }
+      }
+    }
+  }
 });
 
 function updateChart(chart) {
