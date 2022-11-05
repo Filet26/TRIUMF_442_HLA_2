@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 body {
@@ -25,6 +25,7 @@ body {
   max-width: 99.9vw;
   margin: 0;
   font-weight: 500;
+  overflow-x: hidden;
 }
 
 main {
