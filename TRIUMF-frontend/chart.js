@@ -123,7 +123,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: 'Intervals (5s)',
+          text: 'Intervals (5s) over 15 Minute Cycles',
           font: {
             size: 15
           }
