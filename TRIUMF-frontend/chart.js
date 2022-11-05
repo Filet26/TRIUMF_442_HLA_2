@@ -1,5 +1,6 @@
 const ctx = document.getElementById("myChart");
 
+// Main data array, stores graph data points
 let dataArray = [];
 
 let labelArray = Array.from({ length: 180 }, (x, i) => i + 5);
@@ -8,6 +9,7 @@ let cycles = 0;
 
 let index = 0;
 
+// takes in a string of a number represented in scientific notation, returns the notation
 function round(num) {
   let eIndex = num.indexOf("e");
   if (eIndex == -1) {
@@ -25,6 +27,7 @@ function updateGraph() {
   // updates charts units eg. Current(A) e-10
   myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
 
+  // Shift elements in graph automatically
   if (dataArray.length > 180) {
     dataArray.shift();
   }
@@ -77,6 +80,14 @@ const myChart = new Chart(ctx, {
     ],
   },
   options: {
+    elements: {
+      line: {
+        tension: 0.1, // smooth lines
+      },
+      point: {
+        radius: 0,
+      },
+    },
     responsive: true,
     plugins: {
       legend: {
@@ -135,4 +146,5 @@ function updateChart(chart) {
   chart.update();
 }
 
+// Updates chart every 5 seconds
 setInterval(updateChart, 5000, myChart);

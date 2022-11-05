@@ -33,6 +33,7 @@ async function getAllData() {
   olisVariables = await getOlisVariables();
 }
 
+// GET request to jaya microservice, returns data in XML format
 async function getLaserDirectionVariables() {
   const url =
     "https://beta.hla.triumf.ca/jaya-isac/IOS:XCB1AW:RDVOL+IOS:XCB1AE:RDVOL+IOS:PSWXCB1A:STATON";
@@ -43,6 +44,7 @@ async function getLaserDirectionVariables() {
   return await response.text();
 }
 
+// Main data fetcher
 async function getOlisVariables() {
   const url =
     "https://beta.hla.triumf.ca/jaya-isac/IOS:BIAS:RDVOL+IOS:BIAS:RDCUR+IOS:BIAS:RDVOL+IOS:BIAS:RDCUR+IOS:IZR:RDVOL+MCIS:BIAS0:RDVOL+MCIS:BIAS0:RDCUR+MCIS:RFS2:FREQ+IOS:MB:MASSOVERQ2+IOS:MB:RDCUR+IOS:HALLMB:RDFIELD+IOS:IG1:RDVAC+IOS:IG2:RDVAC+MCIS:IG1:RDVAC";
@@ -53,6 +55,7 @@ async function getOlisVariables() {
   return await response.text();
 }
 
+// data for our graph
 async function getGraphData() {
   const url = "https://beta.hla.triumf.ca/jaya-isac/IOS:FC6:SCALECUR";
   const options = {
@@ -62,12 +65,14 @@ async function getGraphData() {
   return await response.text();
 }
 
+// Poll fresh data every 5 seconds
 setInterval(async () => {
   laserDirectionVariables = await getLaserDirectionVariables();
   olisVariables = await getOlisVariables();
   graph_data = await getGraphData();
 }, 5000);
 
+// Direction variables, for internal use
 app.get("/direction", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(laserDirectionVariables));
@@ -79,6 +84,7 @@ app.get("/direction", async function (req, res) {
   }
 });
 
+// MAIN route
 app.get("/Dashboard", (req, res) => {
   res.sendFile(path.resolve("../TRIUMF-frontend/index.html"));
 });
@@ -94,6 +100,7 @@ app.get("/OLIS", async function (req, res) {
   }
 });
 
+// Returns data for our graph,
 app.get("/ChartData", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(graph_data));
