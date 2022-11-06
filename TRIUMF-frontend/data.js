@@ -89,8 +89,6 @@ async function mapData(data) {
 
   // gets a fresh copy of data
   const listPVDict = Object.entries(await getLocalOlisData());
-  console.log(listPVDict);
-
   // Reads units from dummy dictionary
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector("tbody");
@@ -109,42 +107,42 @@ async function mapData(data) {
         const beamName = document.createElement("td");
         beamName.rowSpan = "3";
         beamName.textContent = "SIS";
-        beamName.className = "beamName";
+        beamName.className = "beamName sis-header";
         row.appendChild(beamName);
       }
     }
     // Microwave Ion source labesl
     else if (index == 5 || index == 4 || index == 3) {
-      row.className = "original mcis";
+      row.className = "original mws";
       if (index == 3) {
         const beamName = document.createElement("td");
         beamName.rowSpan = "3";
-        beamName.textContent = "MWIS";
-        beamName.className = "beamName";
+        beamName.textContent = "MWS";
+        beamName.className = "beamName mws-header";
         row.appendChild(beamName);
       }
     }
 
-    // A/Q variable label
+    // Multi-charge
     else if (index == 8 || index == 7 || index == 6) {
-      row.className = "original aq";
+      row.className = "original mcis";
       if (index == 6) {
         const beamName = document.createElement("td");
         beamName.rowSpan = "3";
         beamName.textContent = "MCIS";
-        beamName.className = "beamName";
+        beamName.className = "beamName mcis-header";
         row.appendChild(beamName);
       }
     }
 
-    // Vacuum variable group label
+    // Mag
     else if (index == 9 || index == 10 || index == 11) {
-      row.className = "original vacuum";
+      row.className = "original mb";
       if (index == 9) {
         const beamName = document.createElement("td");
         beamName.rowSpan = "3";
         beamName.textContent = "Magnetic Bender";
-        beamName.className = "beamName";
+        beamName.className = "beamName mb-header";
         row.appendChild(beamName);
       }
     } else {
@@ -272,54 +270,33 @@ async function setDiagramLabels() {
   return;
 }
 
-let activeSlide = 4;
+// Changes table source header based on current active beam
 
-async function changeActiveSlidePicture() {
-  const slide1 = document.querySelector(".slide1");
-  const slide2 = document.querySelector(".slide2");
-  const slide3 = document.querySelector(".slide3");
-  const slide4 = document.querySelectorAll(".slide4");
-  if (activeSlide == 1) {
-    setTimeout(() => {}, 45000);
-    activeSlide++;
-    slide1.style.display = "none";
-    slide2.style.display = "inline-block";
-    slide2.style.width = "99%";
-    slide2.style.height = "99%";
-    return;
-  }
-  if (activeSlide == 2) {
-    activeSlide++;
-    slide2.style.display = "none";
-    slide3.style.display = "inline-block";
-    slide3.style.width = "99%";
-    slide3.style.height = "99%";
-    return;
-  }
-  if (activeSlide == 3) {
-    activeSlide++;
-    slide3.style.display = "none";
-    for (const item of slide4) {
-      item.style.display = "inline-block";
-    }
-    return;
-  }
-  if (activeSlide == 4) {
-    activeSlide = 1;
-    for (const item of slide4) {
-      item.style.display = "none";
-    }
+function activeBeamInfo() {
+  const current_beam = document.querySelector(
+    ".diagramLabelBeamSource"
+  ).innerHTML;
 
-    slide1.style.display = "inline-block";
-    slide1.style.width = "99%";
-    slide1.style.height = "99%";
-    return;
+  // Reset the classes, so that only 1 can be active
+  let sis = document.querySelector(".sis-header");
+  let mws = document.querySelector(".mws-header");
+  let mcis = document.querySelector(".mcis-header");
+
+  // Reset the classes, so that only 1 can be active
+  sis.classList.remove("activeBeam");
+  mws.classList.remove("activeBeam");
+  mcis.classList.remove("activeBeam");
+
+  // set classlist based on current beam source, active beam is a blinking border class
+  if (current_beam == "Beam Source: Surface Ion") {
+    sis.classList.add("activeBeam");
+  } else if (current_beam == "Beam Source: Microwave") {
+    mws.classList.add("activeBeam");
+  } else if (current_beam == "Beam Source: Multi-Charge Ion") {
+    mcis.classList.add("activeBeam");
   }
 }
 
-setInterval(() => {
-  changeActiveSlidePicture();
-}, 15000);
 // Nav bar Clock
 insertTime();
 //clock goes tick tock
@@ -336,4 +313,5 @@ setInterval(() => {
   updateSecondColumnTableValues();
   setDiagramLabels();
   updateGraphData();
+  activeBeamInfo();
 }, 5000);

@@ -182,7 +182,7 @@ td {
   text-align: center;
 }
 
-.vacuum {
+.sis {
   background-color: #dcecf1;
 }
 
@@ -190,12 +190,25 @@ td {
   background-color: #dcecf1;
 }
 
-.aq {
+.mws {
   background-color: #efefef;
 }
 
-.sis {
+.mb {
   background-color: #efefef;
+}
+
+/* make item blink, active beam info function*/
+
+.activeBeam {
+  /* animation that makes element blink a certain color */
+  animation: blinker 1s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    border: 5px solid #009fdf;
+  }
 }
 
 div.subSection {
