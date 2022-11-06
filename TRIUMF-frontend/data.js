@@ -284,16 +284,16 @@ async function changeActiveSlidePicture() {
     activeSlide++;
     slide1.style.display = "none";
     slide2.style.display = "inline-block";
-    slide2.style.width = "100%";
-    slide2.style.height = "100%";
+    slide2.style.width = "99%";
+    slide2.style.height = "99%";
     return;
   }
   if (activeSlide == 2) {
     activeSlide++;
     slide2.style.display = "none";
     slide3.style.display = "inline-block";
-    slide3.style.width = "100%";
-    slide3.style.height = "100%";
+    slide3.style.width = "99%";
+    slide3.style.height = "99%";
     return;
   }
   if (activeSlide == 3) {
@@ -311,8 +311,8 @@ async function changeActiveSlidePicture() {
     }
 
     slide1.style.display = "inline-block";
-    slide1.style.width = "100%";
-    slide1.style.height = "100%";
+    slide1.style.width = "99%";
+    slide1.style.height = "99%";
     return;
   }
 }

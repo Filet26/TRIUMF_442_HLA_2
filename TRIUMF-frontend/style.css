@@ -155,6 +155,11 @@ img.graph {
   font-weight: 500;
 }
 
+.slideimg {
+  border-radius: 1rem;
+  border: 5px solid black;
+}
+
 /* SLideshow */
 
 /* .slide {
