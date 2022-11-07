@@ -131,6 +131,9 @@ const myChart = new Chart(ctx, {
       y: {
         beginAtZero: false,
         ticks: {
+          callback: function (val, index, ticks) {
+            return Number.parseFloat(val).toExponential(2); // limit to 2 decimal numbers
+          },
           font: {
             size: 15,
           },
