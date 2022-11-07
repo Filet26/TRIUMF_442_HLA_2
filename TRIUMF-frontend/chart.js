@@ -20,9 +20,15 @@ function round(num) {
   }
 }
 
+// converts number from scienfic notation to normal notation
+function convertNum(num) {
+  let number = Number(num).toFixed(20);
+  return number;
+}
+
 function updateGraph() {
   const dataValue = document.getElementById("graph_data").innerText;
-  dataArray.push(dataValue.slice(0, 5));
+  dataArray.push(convertNum(dataValue));
 
   // updates charts units eg. Current(A) e-10
   myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
