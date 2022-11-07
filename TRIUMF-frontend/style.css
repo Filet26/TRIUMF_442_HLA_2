@@ -13,7 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
 }
 
 body {
@@ -245,19 +245,47 @@ canvas {
 
 /* responsive */
 @media only screen and (max-width: 600px) {
-  html,
   body {
-    height: 100%;
-    width: 100vw;
+    flex-direction: column;
+    width: 99vw;
   }
   section {
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+  table {
+    font-size: small;
   }
   main {
     flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: fit-content;
   }
+
+  h2 {
+    text-align: center;
+  }
+  div.subSection {
+    flex-direction: column;
+    max-height: 100%;
+    overflow-y: hidden;
+    height: 100%;
+  }
+  div.smallContainer {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
   header {
     width: 100%;
+    height: auto;
+    flex-direction: column;
+    max-height: fit-content;
+    padding: 0;
+    text-align: center;
   }
   .imageLabelContainer {
     width: 100%;
@@ -273,6 +301,13 @@ canvas {
 
   .navText {
     padding: 5%;
+  }
+  footer {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    text-align: center;
   }
 }
 
