@@ -253,6 +253,7 @@ canvas {
     flex-direction: column;
     width: 100%;
     max-width: 100%;
+    height: 100%;
   }
   table {
     font-size: small;
@@ -277,6 +278,11 @@ canvas {
     width: 100%;
     height: auto;
     max-height: 100%;
+    padding-left: 5%;
+  }
+  .imageLabelContainer {
+    width: auto;
+    height: 50vh;
   }
 
   header {
@@ -284,7 +290,7 @@ canvas {
     height: auto;
     flex-direction: column;
     max-height: fit-content;
-    padding: 0;
+    padding: 0 0 2rem 0;
     text-align: center;
   }
   .imageLabelContainer {

@@ -334,9 +334,7 @@ setInterval(() => {
 // Mapping data, 5 second refresh
 mapData(fetchData());
 // Wrapped all(most of) the chart functions in window wrapper
-if (window.innerWidth > 600) {
-  setDiagramLabels();
-}
+setDiagramLabels();
 
 updateGraphData();
 setInterval(() => {
