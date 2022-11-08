@@ -22,11 +22,11 @@
         stroke: #ef4445;
       }
 
-      .cls-3, .cls-6, .cls-8, .cls-11, .cls-13, .cls-20, .cls-21 {
+      .cls-3, .cls-6, .cls-8, .cls-11, .cls-13, .cls-20 {
         stroke-width: 2px;
       }
 
-      .cls-5, .cls-9, .cls-14, .cls-16, .cls-19 {
+      .cls-5, .cls-16, .cls-19 {
         stroke-width: 3px;
       }
 
@@ -46,6 +46,24 @@
         <!-- laser color -->
         stroke: #dc4d9b;
       }
+      .cls-23 {
+        <!-- laser color -->
+        <!-- base: 2.5 -->
+        stroke-width: 4.5;
+      }
+      .cls-9, .cls-14 {
+        <!-- laser color -->
+        <!-- base: 3 -->
+        stroke-width: 5;
+      }
+      .cls-21 {
+        <!-- laser color -->
+        <!-- base: 2 -->
+        stroke-width: 4;
+      }
+      
+
+      
 
       .cls-10 {
         stroke: #6fbe44;
@@ -67,9 +85,7 @@
         stroke: #3c54a4;
       }
 
-      .cls-23 {
-        stroke-width: 2.5px;
-      }
+      
     </style>
   </defs>
   <g id="Layer_7" data-name="Layer 7">
