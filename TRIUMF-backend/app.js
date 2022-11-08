@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import bodyParser from "body-parser";
 import convert from "xml-js";
 import cors from "cors";
-import { parse_xml } from "./test.js";
+import { parse_xml } from "./parse.js";
 import path from "path";
 import { fileURLToPath } from "url";
 

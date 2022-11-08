@@ -13,7 +13,7 @@ let index = 0;
 function round(num) {
   let eIndex = num.indexOf('e');
   if (eIndex == -1) {
-    ('');
+    return '';
   } else {
     let notation = num.substring(eIndex);
     return notation;
@@ -82,8 +82,8 @@ const myChart = new Chart(ctx, {
         //   "rgba(153, 102, 255, 1)",
         //   "rgba(255, 159, 64, 1)",
         // ],
-        borderColor: '#93E9BE',
-        borderWidth: 1.5
+        borderColor: '#e8364',
+        borderWidth: 1
       }
     ]
   },
