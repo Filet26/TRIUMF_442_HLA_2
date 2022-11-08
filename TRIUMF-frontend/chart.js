@@ -65,6 +65,7 @@ const myChart = new Chart(ctx, {
         label: 'Voltage over 5 Second Intervals',
         data: dataArray,
         fill: true,
+        fillColor: '#93E9BE',
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -81,8 +82,8 @@ const myChart = new Chart(ctx, {
         //   "rgba(153, 102, 255, 1)",
         //   "rgba(255, 159, 64, 1)",
         // ],
-        borderColor: '#e8364',
-        borderWidth: 1
+        borderColor: '#93E9BE',
+        borderWidth: 1.5
       }
     ]
   },

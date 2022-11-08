@@ -201,13 +201,19 @@ td {
 /* make item blink, active beam info function*/
 
 .activeBeam {
-  /* animation that makes element blink a certain color */
+  /* animation that makes element pulse a certain color */
   animation: blinker 1s infinite;
 }
 
 @keyframes blinker {
+  0% {
+    border: 5px solid #8cc2d7;
+  }
   50% {
-    border: 5px solid #009fdf;
+    border: 5px solid #006b96;
+  }
+  100% {
+    border: 5px solid #60b8db;
   }
 }
 
