@@ -93,7 +93,7 @@ app.get('/Dashboard', (req, res) => {
 
 app.get('/twitter', (req, res) => {
   try {
-    res.status(200).json(twitterData);
+    res.json(twitterData);
   } catch (error) {
     console.log('twitter broke');
   }

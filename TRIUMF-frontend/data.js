@@ -230,6 +230,7 @@ async function getTwitterFromExpress() {
     method: 'GET'
   });
   const freshData = await response.json();
+  console.log(freshData);
   return freshData;
 }
 
@@ -358,6 +359,8 @@ mapData(populateDummyData());
 setDiagramLabels();
 
 updateGraphData();
+
+getTwitterFromExpress();
 setInterval(() => {
   updateSecondColumnTableValues();
   if (window.innerWidth > 600) {
