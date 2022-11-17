@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import bodyParser from "body-parser";
 import convert from "xml-js";
 import cors from "cors";
-import { parse_xml } from "./parse.js";
+import { parse_xml, parse_xml_list } from "./parse.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -93,7 +93,9 @@ app.get("/OLIS", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(olisVariables));
     let data = parse_xml(xmlObject);
-    res.status(200).json(data[0]);
+    let test_data = parse_xml_list(xmlObject);
+    // res.status(200).json(data[0]);
+    res.json(test_data);
   } catch (err) {
     console.log(err);
     res.status(500).json({ msg: `Internal Server Error.` });
