@@ -1,8 +1,8 @@
-import * as dotenv from 'dotenv';
-
 // Get User Tweet timeline by user ID
 // https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/quick-start
 import needle from 'needle';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 // this is the ID for @crjcharles
 const userId = '1244525719079665664';
