@@ -88,7 +88,7 @@ async function updateTwitterFontSize() {
   const iframe = document.querySelector('#twitter-widget-0');
   const elementList = iframe.contentWindow.document.querySelectorAll(
     '.timeline-Tweet-text'
-  ).contentDocument;
+  );
   for (const node of elementList) {
     node.style.fontSize = '225%';
     node.style.lineHeight = '28px';
@@ -223,6 +223,16 @@ async function getLaserDirectionData() {
   return freshData;
 }
 
+// fetch twitter from backend
+
+async function getTwitterFromExpress() {
+  const response = await fetch('http://127.0.0.1:8081/twitter', {
+    method: 'GET'
+  });
+  const freshData = await response.json();
+  return freshData;
+}
+
 async function getLocalOlisData() {
   const response = await fetch('http://127.0.0.1:8081/OLIS', {
     method: 'GET'
@@ -336,10 +346,10 @@ insertTwitterMobile();
 removeChartIfMobile();
 // Nav bar Clock
 insertTime();
+
 //clock goes tick tock
 setInterval(() => {
   insertTime();
-  updateTwitterFontSize();
 }, 1000);
 
 // Mapping data, 5 second refresh

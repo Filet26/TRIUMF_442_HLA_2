@@ -57,12 +57,12 @@ const getUserTweets = async () => {
     }
   }
 
-  console.dir(userTweets, {
+  /*   console.dir(userTweets, {
     depth: null
-  });
-  console.log(
+  }); */
+  /*   console.log(
     `Got ${userTweets.length} Tweets from ${userName} (user ID ${userId})!`
-  );
+  ); */
 };
 
 const getPage = async (params, options, nextToken) => {

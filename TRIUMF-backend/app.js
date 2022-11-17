@@ -1,7 +1,5 @@
 import express from 'express';
-import * as dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import bodyParser from 'body-parser';
 import convert from 'xml-js';
 import cors from 'cors';
 import { parse_xml, parse_xml_list } from './parse.js';
@@ -91,6 +89,14 @@ app.get('/direction', async function (req, res) {
 // MAIN route
 app.get('/Dashboard', (req, res) => {
   res.sendFile(path.resolve('../TRIUMF-frontend/index.html'));
+});
+
+app.get('/twitter', (req, res) => {
+  try {
+    res.status(200).json(twitterData);
+  } catch (error) {
+    console.log('twitter broke');
+  }
 });
 
 app.get('/OLIS', async function (req, res) {
