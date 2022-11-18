@@ -207,13 +207,13 @@ td {
 
 @keyframes blinker {
   0% {
-    border: 5px solid #8cc2d7;
+    border: 5px solid #f5f5f5;
   }
   50% {
     border: 5px solid #006b96;
   }
   100% {
-    border: 5px solid #60b8db;
+    border: 5px solid #f5f5f5;
   }
 }
 
