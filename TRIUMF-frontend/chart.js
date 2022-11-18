@@ -10,13 +10,18 @@ let cycles = 0;
 let index = 0;
 
 // takes in a string of a number represented in scientific notation, returns the notation
+
 function round(num) {
-  let eIndex = num.indexOf('e');
-  if (eIndex == -1) {
-    return '';
-  } else {
-    let notation = num.substring(eIndex);
-    return notation;
+  try {
+    let eIndex = num.indexOf('e');
+    if (eIndex == -1) {
+      return '';
+    } else {
+      let notation = num.substring(eIndex);
+      return notation;
+    }
+  } catch (error) {
+    console.log('Chart is hidden');
   }
 }
 
@@ -156,4 +161,8 @@ function updateChart(chart) {
 }
 
 // Updates chart every 5 seconds
-setInterval(updateChart, 5000, myChart);
+try {
+  setInterval(updateChart, 5000, myChart);
+} catch (error) {
+  console.log('Chart is hidden');
+}
