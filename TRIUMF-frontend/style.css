@@ -111,10 +111,6 @@ img.logo {
 }
 
 /* VOLTAGE GRAPH */
-img.graph {
-  width: auto;
-  height: 95%;
-}
 
 .chartContainer {
   height: 100%;
@@ -160,19 +156,7 @@ img.graph {
   border: 5px solid #f5f5f5;
 }
 
-/* SLideshow */
 
-/* .slide {
-  display: none;
-} */
-
-/* tr:nth-child(odd) {
-  background: #efefef;
-}
-tr:nth-child(even) {
-  background: #fff;
-}
- */
 th {
   background: #fff;
   text-align: center;
@@ -182,28 +166,7 @@ td {
   text-align: center;
 }
 
-.sis {
-  background-color: #dcecf1;
-}
-
-.mcis {
-  background-color: #dcecf1;
-}
-
-.mws {
-  background-color: #efefef;
-}
-
-.mb {
-  background-color: #efefef;
-}
-
 /* make item blink, active beam info function*/
-
-.activeBeam {
-  /* animation that makes element pulse a certain color */
-  animation: blinker 1s infinite;
-}
 
 @keyframes blinker {
   0% {
@@ -234,15 +197,6 @@ div.smallContainer {
   width: 45%;
   height: 99%;
   max-height: 99%;
-}
-
-h2.sectionTitle {
-  position: absolute;
-  left: 1%;
-  bottom: 1%;
-  background-color: white;
-  border: 5px solid white;
-  border-radius: 5px;
 }
 
 canvas {
@@ -306,11 +260,6 @@ canvas {
     width: 100%;
   }
 
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .navText {
     padding: 5%;
   }
@@ -322,17 +271,30 @@ canvas {
     text-align: center;
   }
 }
-
-/*green LED */
-.ledGreen {
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #abff00;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px,
-    #89ff00 0 2px 12px;
+.sis {
+  background-color: #dcecf1;
 }
+
+.mcis {
+  background-color: #dcecf1;
+}
+
+.mws {
+  background-color: #efefef;
+}
+
+.mb {
+  background-color: #efefef;
+}
+
+/* make item blink, active beam info function*/
+
+.activeBeam {
+  /* animation that makes element pulse a certain color */
+  animation: blinker 1s infinite;
+}
+
+
 
 /* Graph Data Invisible Div */
 
@@ -340,64 +302,6 @@ canvas {
   display: none;
 }
 
-/* cursed neon css below*/
-
-.light {
-  position: relative;
-  padding: 25px 30px;
-  color: #17b825;
-  font-size: 20px;
-  text-transform: uppercase;
-  transition: 0.5s;
-  letter-spacing: 4px;
-  cursor: pointer;
-  overflow: hidden;
-  filter: hue-rotate(20deg);
-}
-.light:hover {
-  background-color: #17b825;
-  color: #050801;
-  box-shadow: 0 0 5px #17b825, 0 0 25px #17b825, 0 0 50px #17b825,
-    0 0 200px #17b825;
-}
-.light div {
-  position: absolute;
-}
-.light div:nth-child(1) {
-  width: 100%;
-  height: 2px;
-  top: 0;
-  left: -100%;
-  background: linear-gradient(to right, transparent, #17b825);
-  animation: animate1 4s linear infinite;
-}
-.light div:nth-child(2) {
-  width: 2px;
-  height: 100%;
-  top: -100%;
-  right: 0;
-  background: linear-gradient(to bottom, transparent, #17b825);
-  animation: animate2 4s linear infinite;
-  animation-delay: 1s;
-}
-.light div:nth-child(3) {
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  right: -100%;
-  background: linear-gradient(to left, transparent, #17b825);
-  animation: animate3 4s linear infinite;
-  animation-delay: 2s;
-}
-.light div:nth-child(4) {
-  width: 2px;
-  height: 100%;
-  bottom: -100%;
-  left: 0;
-  background: linear-gradient(to top, transparent, #17b825);
-  animation: animate4 4s linear infinite;
-  animation-delay: 3s;
-}
 
 @keyframes animate1 {
   0% {
