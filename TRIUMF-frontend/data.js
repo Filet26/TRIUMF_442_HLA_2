@@ -1,67 +1,30 @@
-function populateDummyData() {
-  // dummy data
-
-  const data = {
-    readPvDict: {
-      'IOS:BEAMTYPE': '1',
-      'IOS:BIAS:RDVOL': '12636.987869077593',
-      'IOS:HALLMB:RDFIELD': '34.916000000000054',
-      'IOS:IG1:RDVAC': '7.941049439712669e-08',
-      'IOS:IG2:RDVAC': '1.9525325860315103e-07',
-      'IOS:MB:MASSOVERQ2': '3.9764078010664123',
-      'ISAC:IOSBEAMPATH': 'ios-hebt2-dragon',
-      'MCIS:BIAS0:VOL': '12637.216754406041',
-      'MCIS:EL1:VOL': '0.0',
-      'MCIS:IG1:RDVAC': '3.2331256866455076e-07',
-      'MCIS:RFS1:AMPL': '18.48680000000001',
-      'MCIS:RFS1:FREQ': '13.04530000000061',
-      'MCIS:RFS2:AMPL': '17.864000000000004',
-      'MCIS:RFS2:FREQ': '13.828357500000033'
-    },
-    readUnitsDict: {
-      // SIS
-      'IOS:BIAS:RDVOL': 'V',
-      'IOS:IZR:RDCUR': 'A',
-      'IOS:IG2:RDVAC	': 'Torr',
-      // MWIS
-      'IOS:BIAS:RDCUR': 'V',
-      'IOS:SSRFS:RDFP': 'W',
-      'IOS:IG1:RDVAC': 'Torr',
-      // MCIS
-      'MCIS:BIAS0:RDVOL': 'V',
-      'MCIS:BIAS0:RDCUR': 'uA',
-      'MCIS:IG1:RDVAC': 'Torr',
-      // MB
-      'IOS:MB:MASSOVERQ2': 'A/Q',
-      'IOS:MB:RDCUR': 'A',
-      'IOS:HALLMB:RDFIELD': 'G'
-    },
-    timestamp: '2022-10-07 11:36:01'
-  };
-  return data;
-}
+const readUnitsDict = {readUnitsDict: {
+  //dict for units in table
+  // SIS
+  'IOS:BIAS:RDVOL': 'V',
+  'IOS:IZR:RDCUR': 'A',
+  'IOS:IG2:RDVAC	': 'Torr',
+  // MWIS
+  'IOS:BIAS:RDCUR': 'V',
+  'IOS:SSRFS:RDFP': 'W',
+  'IOS:IG1:RDVAC': 'Torr',
+  // MCIS
+  'MCIS:BIAS0:RDVOL': 'V',
+  'MCIS:BIAS0:RDCUR': 'uA',
+  'MCIS:IG1:RDVAC': 'Torr',
+  // MB
+  'IOS:MB:MASSOVERQ2': 'A/Q',
+  'IOS:MB:RDCUR': 'A',
+  'IOS:HALLMB:RDFIELD': 'G'
+}}
 
 // Removes filler dummy data values
 function removeFiller() {
-  //need filler to stop layout shift
+  //need filler to stop table layout shift
   const fillerTableItems = document.querySelectorAll('.dummyTable');
   fillerTableItems.forEach((element) => {
     element.remove();
   });
-}
-
-// converts list of dictionaries into a list of lists
-function pvToList(olisVariables) {
-  let pv_list = [];
-
-  for (let i = 0; i < olisVariables.length; i++) {
-    let subList = [
-      Object.keys(olisVariables[i])[0],
-      Object.values(olisVariables[i])[0]
-    ];
-    pv_list.push(subList);
-  }
-  return pv_list;
 }
 
 // this function rounds the PV values
@@ -102,11 +65,11 @@ async function mapData(data) {
   removeFiller();
 
   // gets a fresh copy of data
-  const listPVDict = pvToList(await getLocalOlisData());
+  const listPVDict = await getLocalOlisData()
   // Reads units from dummy dictionary
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector('tbody');
-
+  console.log(listPVDict)
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
 
@@ -167,20 +130,13 @@ async function mapData(data) {
     const valueRow = document.createElement('td');
 
     // PV Name
-    nameRow.textContent += value[0];
+    nameRow.textContent += Object.keys(listPVDict[index]);
 
     // actual number
     valueRow.textContent += roundNum(value[1]);
 
     row.appendChild(nameRow);
     row.appendChild(valueRow);
-
-    // for (const property of value) {
-    //   const tableCell = document.createElement("td");
-    //   console.log(value);
-    //   tableCell.textContent += property;
-    //   row.appendChild(tableCell);
-    // }
 
     // table cell for the units
     const tableCell = document.createElement('td');
@@ -200,12 +156,12 @@ async function updateGraphData() {
 }
 
 async function updateSecondColumnTableValues() {
-  const listPVDict = pvToList(await getLocalOlisData());
+  const listPVDict = await getLocalOlisData();
   const tableBody = document.querySelector('tbody');
   const tableRows = tableBody.querySelectorAll('tr');
   tableRows.forEach((row, index) => {
     const tableCell = row.querySelector('td:nth-last-child(2)');
-    tableCell.textContent = roundNum(listPVDict[index][1]);
+    tableCell.textContent = roundNum(Object.values(listPVDict[index]));
   });
 }
 
@@ -258,38 +214,30 @@ async function setDiagramLabels() {
   const cData = freshData['IOS:PSWXCB1A:STATON'];
   let statusElement = document.querySelector('.diagramLabelBeamStatus');
   let sourceElement = document.querySelector('.diagramLabelBeamSource');
-  let diagramImageElement = document.querySelector('.diagram-img')
+  let diagramImageElement = document.querySelector('.diagram-img');
 
   // Logic for bean source, ask dr C
   if (aData > 400 && bData > 400 && cData == 1) {
     diagramImageElement.src = './public/graphic_left.svg';
-    sourceElement.innerHTML =
-      'Beam Source: Surface Ion';
-      statusElement.innerHTML =
-      'Beam Status: ON';
+    sourceElement.innerHTML = 'Beam Source: Surface Ion';
+    statusElement.innerHTML = 'Beam Status: ON';
     return;
   }
   if (aData > 400 && bData > 400 && cData == 0) {
     diagramImageElement.src = './public/graphic_right.svg';
-    sourceElement.innerHTML =
-      'Beam Source: Microwave';
-      statusElement.innerHTML =
-      'Beam Status: ON';
+    sourceElement.innerHTML = 'Beam Source: Microwave';
+    statusElement.innerHTML = 'Beam Status: ON';
     return;
   }
   if (aData <= 400 && bData <= 400) {
     diagramImageElement.src = './public/graphic_mid.svg';
-    sourceElement.innerHTML =
-      'Beam Source: Multi-Charge Ion';
-      statusElement.innerHTML =
-      'Beam Status: ON';
+    sourceElement.innerHTML = 'Beam Source: Multi-Charge Ion';
+    statusElement.innerHTML = 'Beam Status: ON';
     return;
   }
   diagramImageElement.src = './public/graphic_none.svg';
-  sourceElement.innerHTML =
-    'Beam Source: None';
-    statusElement.innerHTML =
-    'Beam Status: OFF';
+  sourceElement.innerHTML = 'Beam Source: None';
+  statusElement.innerHTML = 'Beam Status: OFF';
   return;
 }
 
@@ -355,7 +303,7 @@ setInterval(() => {
 }, 1000);
 
 // Mapping data, 5 second refresh
-mapData(populateDummyData());
+mapData(readUnitsDict);
 // Wrapped all(most of) the chart functions in window wrapper
 setDiagramLabels();
 

@@ -59,7 +59,7 @@ function updateLabel() {
   }
 }
 
-setInterval(updateGraph, 5000);
+
 
 const myChart = new Chart(ctx, {
   type: 'line',
@@ -147,6 +147,8 @@ const myChart = new Chart(ctx, {
     }
   }
 });
+
+setInterval(updateGraph, 5000);
 
 function updateChart(chart) {
   chart.update();
