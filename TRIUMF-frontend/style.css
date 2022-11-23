@@ -259,6 +259,9 @@ canvas {
   img.logo {
     width: 100%;
   }
+  .chartContainer{
+    display: none;
+  }
 
   .navText {
     padding: 5%;
