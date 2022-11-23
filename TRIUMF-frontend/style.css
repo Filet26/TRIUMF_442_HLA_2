@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Open Sans';
+
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   margin: 0;
   font-weight: 500;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 main {
@@ -54,6 +56,7 @@ footer {
   padding: 0.2rem;
   background-color: #007bdff9;
   align-items: center;
+  margin-top: -1%;
 }
 
 footer p {
