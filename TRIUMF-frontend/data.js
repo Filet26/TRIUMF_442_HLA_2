@@ -317,6 +317,7 @@ mapData(readUnitsDict);
 setDiagramLabels();
 
 updateGraphData();
+updateSecondColumnTableValues();
 
 getTwitterFromExpress();
 setInterval(() => {
