@@ -290,7 +290,7 @@ function responsiveElements() {
     return chartElement.style.display = 'none';
   }
   {
-    twitterElement.style.height = '100vh'
+    twitterElement.style.height = '100%'
     twitterElement.style.width = '100%'
     twitterIFrame.style.height = '100%'
     twitterContainer.style.height = '100%'
