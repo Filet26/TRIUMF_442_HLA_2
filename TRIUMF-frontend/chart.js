@@ -3,7 +3,7 @@ const ctx = document.getElementById('myChart');
 // Main data array, stores graph data points
 let dataArray = [];
 
-let labelArray = Array.from({ length: 180 }, (x, i) => i + 5);
+let labelArray = Array.from({ length: 360 }, (x, i) => i + 5);
 
 let cycles = 0;
 
@@ -39,19 +39,19 @@ function updateGraph() {
   myChart.options.scales.y.title.text = 'Current (A) ' + round(dataValue);
 
   // Shift elements in graph automatically
-  if (dataArray.length > 180) {
+  if (dataArray.length > 360) {
     dataArray.shift();
   }
   cycles++;
-  if (cycles > 180) {
+  if (cycles > 370) {
     updateLabel();
   }
 }
 
 function updateLabel() {
-  if (cycles > 180) {
-    labelArray.push(Number(labelArray[index]).toPrecision(4).toString());
-    if (index > 180) {
+  if (cycles > 360) {
+    labelArray.push(Number(labelArray[index]).toString());
+    if (index > 360) {
       index = 0;
     }
     index++;
@@ -120,7 +120,7 @@ const myChart = new Chart(ctx, {
         },
         title: {
           display: true,
-          text: 'Intervals (5s) over 180 Cycles (15 Min)',
+          text: 'Intervals (5s) over 360 Cycles (30 Min)',
           font: {
             size: 15
           }
