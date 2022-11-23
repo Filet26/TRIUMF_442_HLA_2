@@ -1,22 +1,24 @@
-const readUnitsDict = {readUnitsDict: {
-  //dict for units in table
-  // SIS
-  'IOS:BIAS:RDVOL': 'V',
-  'IOS:IZR:RDCUR': 'A',
-  'IOS:IG2:RDVAC	': 'Torr',
-  // MWIS
-  'IOS:BIAS:RDCUR': 'V',
-  'IOS:SSRFS:RDFP': 'W',
-  'IOS:IG1:RDVAC': 'Torr',
-  // MCIS
-  'MCIS:BIAS0:RDVOL': 'V',
-  'MCIS:BIAS0:RDCUR': 'uA',
-  'MCIS:IG1:RDVAC': 'Torr',
-  // MB
-  'IOS:MB:MASSOVERQ2': 'A/Q',
-  'IOS:MB:RDCUR': 'A',
-  'IOS:HALLMB:RDFIELD': 'G'
-}}
+const readUnitsDict = {
+  readUnitsDict: {
+    //dict for units in table
+    // SIS
+    'IOS:BIAS:RDVOL': 'V',
+    'IOS:IZR:RDCUR': 'A',
+    'IOS:IG2:RDVAC	': 'Torr',
+    // MWIS
+    'IOS:BIAS:RDCUR': 'V',
+    'IOS:SSRFS:RDFP': 'W',
+    'IOS:IG1:RDVAC': 'Torr',
+    // MCIS
+    'MCIS:BIAS0:RDVOL': 'V',
+    'MCIS:BIAS0:RDCUR': 'uA',
+    'MCIS:IG1:RDVAC': 'Torr',
+    // MB
+    'IOS:MB:MASSOVERQ2': 'A/Q',
+    'IOS:MB:RDCUR': 'A',
+    'IOS:HALLMB:RDFIELD': 'G'
+  }
+};
 
 // Removes filler dummy data values
 function removeFiller() {
@@ -65,11 +67,11 @@ async function mapData(data) {
   removeFiller();
 
   // gets a fresh copy of data
-  const listPVDict = await getLocalOlisData()
+  const listPVDict = await getLocalOlisData();
   // Reads units from dummy dictionary
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector('tbody');
-  console.log(listPVDict)
+  console.log(listPVDict);
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
 
@@ -133,7 +135,7 @@ async function mapData(data) {
     nameRow.textContent += Object.keys(listPVDict[index]);
 
     // actual number
-    valueRow.textContent += roundNum(value[1]);
+    valueRow.textContent += roundNum(value);
 
     row.appendChild(nameRow);
     row.appendChild(valueRow);
@@ -171,40 +173,30 @@ function insertTime() {
   element.textContent = `${d.toTimeString()}`;
 }
 
-async function getLaserDirectionData() {
-  const response = await fetch('http://127.0.0.1:8081/direction', {
+// fetch data from backend
+
+async function fetchData(url) {
+  const response = await fetch(url, {
     method: 'GET'
   });
   const freshData = await response.json();
   return freshData;
 }
 
-// fetch data from backend
+async function getLaserDirectionData() {
+  return fetchData('http://127.0.0.1:8081/direction');
+}
 
 async function getTwitterFromExpress() {
-  const response = await fetch('http://127.0.0.1:8081/twitter', {
-    method: 'GET'
-  });
-  const freshData = await response.json();
-  console.log(freshData);
-  return freshData;
+  return fetchData('http://127.0.0.1:8081/twitter');
 }
 
 async function getLocalOlisData() {
-  const response = await fetch('http://127.0.0.1:8081/OLIS', {
-    method: 'GET'
-  });
-  const freshData = await response.json();
-
-  return freshData;
+  return fetchData('http://127.0.0.1:8081/OLIS');
 }
 
 async function getGraphData() {
-  const response = await fetch('http://127.0.0.1:8081/ChartData', {
-    method: 'GET'
-  });
-  const freshData = await response.json();
-  return freshData;
+  return fetchData('http://127.0.0.1:8081/ChartData');
 }
 
 async function setDiagramLabels() {
@@ -286,14 +278,32 @@ function insertTwitterMobile() {
   return element.insertAdjacentHTML('afterbegin', twitterHTML);
 }
 
-function removeChartIfMobile() {
+function responsiveElements() {
+  const chartElement = document.querySelector('div.chartContainer');
+  const twitterElement = document.querySelector('div.smallContainer')
+  const twitterContainer = document.querySelector('div.twitter-timeline')
+  const twitterIFrame = document.querySelector('iframe#twitter-widget-0')
   if (window.innerWidth < 600) {
-    const element = document.querySelector('div.chartContainer');
-    return element.replaceChildren();
+    twitterElement.style.height = '80vh'
+    twitterElement.style.width = '90vw'
+    twitterElement.style.overflowY = 'auto'
+    return chartElement.style.display = 'none';
+  }
+  {
+    twitterElement.style.height = '100vh'
+    twitterElement.style.width = '100%'
+    twitterIFrame.style.height = '100%'
+    twitterContainer.style.height = '100%'
+    twitterElement.style.overflowY = 'hidden'
+    return chartElement.style.display = 'inline-block';
   }
 }
+
+addEventListener('resize', (event) => {
+  responsiveElements();
+});
+
 insertTwitterMobile();
-removeChartIfMobile();
 // Nav bar Clock
 insertTime();
 

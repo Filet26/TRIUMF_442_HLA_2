@@ -210,6 +210,7 @@ canvas {
   body {
     flex-direction: column;
     width: 99vw;
+    overflow-y:scroll;
   }
   section {
     flex-direction: column;
