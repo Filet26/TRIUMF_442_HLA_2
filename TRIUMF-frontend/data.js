@@ -71,7 +71,6 @@ async function mapData(data) {
   // Reads units from dummy dictionary
   const listUnitsDict = Object.entries(data.readUnitsDict);
   const tableBody = document.querySelector('tbody');
-  console.log(listPVDict);
   for (const [index, value] of listPVDict.entries()) {
     const row = document.createElement('tr');
 
