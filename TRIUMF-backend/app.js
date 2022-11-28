@@ -102,7 +102,9 @@ app.get("/direction", async function (req, res) {
     res.status(200).json(data[0]);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ msg: `Internal Server Error.` });
+    res.status(500).json({
+      msg: `Internal Server Error.`,
+    });
   }
 });
 
@@ -129,7 +131,9 @@ app.get("/OLIS", async function (req, res) {
     res.json(test_data);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ msg: `Internal Server Error.` });
+    res.status(500).json({
+      msg: `Internal Server Error.`,
+    });
   }
 });
 
@@ -141,7 +145,9 @@ app.get("/ChartData", async function (req, res) {
     res.status(200).json(data[0]);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ msg: `Internal Server Error.` });
+    res.status(500).json({
+      msg: `Internal Server Error.`,
+    });
   }
 });
 

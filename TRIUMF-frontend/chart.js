@@ -1,9 +1,14 @@
-const ctx = document.getElementById('myChart');
+const ctx = document.getElementById("myChart");
 
 // Main data array, stores graph data points
 let dataArray = [];
 
-let labelArray = Array.from({ length: 360 }, (x, i) => i + 5);
+let labelArray = Array.from(
+  {
+    length: 360,
+  },
+  (x, i) => i + 5
+);
 
 let cycles = 0;
 
@@ -13,15 +18,15 @@ let index = 0;
 
 function round(num) {
   try {
-    let eIndex = num.indexOf('e');
+    let eIndex = num.indexOf("e");
     if (eIndex == -1) {
-      return '';
+      return "";
     } else {
       let notation = num.substring(eIndex);
       return notation;
     }
   } catch (error) {
-    console.log('Chart is hidden');
+    console.log("Chart is hidden");
   }
 }
 
@@ -32,11 +37,11 @@ function convertNum(num) {
 }
 
 function updateGraph() {
-  const dataValue = document.getElementById('graph_data').innerText;
+  const dataValue = document.getElementById("graph_data").innerText;
   dataArray.push(convertNum(dataValue));
 
   // updates charts units eg. Current(A) e-10
-  myChart.options.scales.y.title.text = 'Current (A) ' + round(dataValue);
+  myChart.options.scales.y.title.text = "Current (A) " + round(dataValue);
 
   // Shift elements in graph automatically
   if (dataArray.length > 360) {
@@ -59,72 +64,70 @@ function updateLabel() {
   }
 }
 
-
-
 const myChart = new Chart(ctx, {
-  type: 'line',
+  type: "line",
   data: {
     labels: labelArray,
     datasets: [
       {
-        label: 'Voltage over 5 Second Intervals',
+        label: "Voltage over 5 Second Intervals",
         data: dataArray,
         fill: true,
-        fillColor: '#93E9BE',
+        fillColor: "#93E9BE",
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)'
+          "rgba(255, 99, 132, 0.2)",
+          "rgba(54, 162, 235, 0.2)",
+          "rgba(255, 206, 86, 0.2)",
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(153, 102, 255, 0.2)",
+          "rgba(255, 159, 64, 0.2)",
         ],
-        borderColor: '#e8364',
-        borderWidth: 1
-      }
-    ]
+        borderColor: "#e8364",
+        borderWidth: 1,
+      },
+    ],
   },
   options: {
     tension: 0.3,
     elements: {
       point: {
-        radius: 0
-      }
+        radius: 0,
+      },
     },
     responsive: true,
     plugins: {
       legend: {
-        display: false
+        display: false,
       },
       title: {
         display: true,
-        text: 'Faraday Cup 6 (FC6) Current vs 5 Second Intervals',
+        text: "Faraday Cup 6 (FC6) Current vs 5 Second Intervals",
         font: {
-          size: 25
-        }
-      }
+          size: 25,
+        },
+      },
     },
     scales: {
       x: {
         grid: {
-          display: false
+          display: false,
         },
         ticks: {
           font: {
-            size: 15
+            size: 15,
           },
           callback: function (val, index) {
             // Hide every 2nd tick label
-            return index % 2 === 0 ? this.getLabelForValue(val) : '';
-          }
+            return index % 2 === 0 ? this.getLabelForValue(val) : "";
+          },
         },
         title: {
           display: true,
-          text: 'Intervals (5s) over 360 Cycles (30 Min)',
+          text: "Intervals (5s) over 360 Cycles (30 Min)",
           font: {
-            size: 15
-          }
-        }
+            size: 15,
+          },
+        },
       },
       y: {
         beginAtZero: false,
@@ -133,19 +136,19 @@ const myChart = new Chart(ctx, {
             return Number.parseFloat(val).toExponential(2); // limit to 2 decimal numbers
           },
           font: {
-            size: 15
-          }
+            size: 15,
+          },
         },
         title: {
           display: true,
-          text: 'Current (A)',
+          text: "Current (A)",
           font: {
-            size: 25
-          }
-        }
-      }
-    }
-  }
+            size: 25,
+          },
+        },
+      },
+    },
+  },
 });
 
 setInterval(updateGraph, 5000);
@@ -158,5 +161,5 @@ function updateChart(chart) {
 try {
   setInterval(updateChart, 5000, myChart);
 } catch (error) {
-  console.log('Chart is hidden');
+  console.log("Chart is hidden");
 }
