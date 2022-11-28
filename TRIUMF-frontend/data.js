@@ -1,6 +1,6 @@
 const readUnitsDict = {
   readUnitsDict: {
-    //dict for units in table
+    //dict for units in table, Name of PV, and Units
     // SIS
     "IOS:BIAS:RDVOL": "V",
     "IOS:IZR:RDCUR": "A",
@@ -182,18 +182,22 @@ async function fetchData(url) {
   return freshData;
 }
 
+// TODO: Change links to deployed URL, eg. www.site.com/direction
 async function getLaserDirectionData() {
   return fetchData("http://127.0.0.1:8081/direction");
 }
 
+// TODO: Change links to deployed URL, eg. www.site.com/twitter
 async function getTwitterFromExpress() {
   return fetchData("http://127.0.0.1:8081/twitter");
 }
 
+// TODO: Change links to deployed URL, eg. www.site.com/olis
 async function getLocalOlisData() {
   return fetchData("http://127.0.0.1:8081/OLIS");
 }
 
+// TODO: Change links to deployed URL, eg. www.site.com/chartdata
 async function getGraphData() {
   return fetchData("http://127.0.0.1:8081/ChartData");
 }

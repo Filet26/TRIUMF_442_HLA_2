@@ -22,9 +22,11 @@
   <header>
 
     <img src="./public/main-logo.png" class="logo" />
+    <!-- Nav bar middle text -->
     <p class="navText">
       Off-Line Ion Sources (OLIS) Facility
     </p>
+    <!--Current Live time container -->
     <h2 class="time"></h2>
 
   </header>
@@ -33,26 +35,26 @@
     <!-- diagram Image -->
     <section class="slideshow">
       <div class="imageLabelContainer slide">
+        <!-- images -->
         <img class="slide1 slideimg" src="./public/MCIS.jpg" alt="Multi-Charge" style="display: none;">
         <img class="slide2 slideimg" src="./public/SIS.jpg" alt="Simple-Charge" style="display: none;">
         <img class="slide3 slideimg" src="./public/MWS.jpg" alt="Microwave-Charge" style="display: none;">
         <label class="diagramLabelBeamSource slide4">Beam Source: Pending</label>
         <label class="diagramLabelBeamStatus slide4">Beam Status: Pending</label>
+        <!-- Diagram -->
         <img src="./public/graphic_none.svg" class="diagram-img slide4" />
       </div>
     </section>
 
     <!-- End Diagram Image -->
 
-
-
-
-
+    <!-- PV Table -->
     <section>
       <div class="subSection">
         <!-- DATA information -->
         <table>
           <thead>
+            <!-- PV table headers -->
             <th>Source</th>
             <th>Name</th>
             <th>Value</th>
@@ -109,16 +111,17 @@
       </div>
       </div>
       <!-- END DATA information -->
+
+      <!-- Live update chart container -->
       <div class="chartContainer">
         <canvas id="myChart" height="auto" width="500vw"></canvas>
       </div>
     </section>
     </section>
 
-    <!-- status information -->
-
-    <!-- END status information -->
   </main>
+
+  <!-- Footer -->
   <footer>
     <p class="footerCredits">Application Developed By Team TRIUMF 442. BCIT Computing, Fall 2022 | Members:
       <a class="footerNameLink" href="https://github.com/kitoshi">Robert Charlton</a>,
@@ -133,6 +136,7 @@
 
     <a target="_blank" href="https://github.com/Filet26/TRIUMF_442_HLA_2"><img class="githubLogo"
         src="./public/githublogo.png" alt="githublogo"></a>
+
     <!-- Sneaky Data -->
     <div id="graph_data"></div>
     <!-- END Sneaky Data -->

@@ -1,11 +1,11 @@
-import express from 'express';
-import fetch from 'node-fetch';
-import convert from 'xml-js';
-import cors from 'cors';
-import { parse_xml, parse_xml_list } from './parse.js';
-import { getUserTweets } from './twitter.js';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import express from "express";
+import fetch from "node-fetch";
+import convert from "xml-js";
+import cors from "cors";
+import { parse_xml, parse_xml_list } from "./parse.js";
+import { getUserTweets } from "./twitter.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = 8081;
@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // for CSS
-app.use(express.static(path.resolve('../TRIUMF-frontend/')));
+app.use(express.static(path.resolve("../TRIUMF-frontend/")));
 
 // pre-initialized variables
 let laserDirectionVariables;
@@ -38,9 +38,9 @@ async function getAllData() {
 // GET request to jaya microservice, returns data in XML format
 async function getLaserDirectionVariables() {
   const url =
-    'https://beta.hla.triumf.ca/jaya-isac/IOS:XCB1AW:RDVOL+IOS:XCB1AE:RDVOL+IOS:PSWXCB1A:STATON';
+    "https://beta.hla.triumf.ca/jaya-isac/IOS:XCB1AW:RDVOL+IOS:XCB1AE:RDVOL+IOS:PSWXCB1A:STATON";
   const options = {
-    method: 'GET'
+    method: "GET",
   };
   let response = await fetch(url, options);
   return await response.text();
@@ -48,20 +48,40 @@ async function getLaserDirectionVariables() {
 
 // Main data fetcher
 async function getOlisVariables() {
-  const url =
-    'https://beta.hla.triumf.ca/jaya-isac/IOS:BIAS:RDVOL+IOS:IZR:RDCUR+IOS:IG2:RDVAC+IOS:BIAS:RDVOL+IOS:SSRFS:RDFP+IOS:IG1:RDVAC+MCIS:BIAS0:RDVOL+MCIS:BIAS0:RDCUR+MCIS:IG1:RDVAC+IOS:MB:MASSOVERQ2+IOS:MB:RDCUR+IOS:HALLMB:RDFIELD';
-  const options = {
-    method: 'GET'
+  // Root URL for data fetching
+  const rooturl = "https://beta.hla.triumf.ca/jaya-isac/";
+
+  // List of PV's for table, will be displayed in order, MAX is 12 PV's
+  const PVDict = {
+    1: "IOS:BIAS:RDVOL",
+    2: "IOS:IZR:RDCUR",
+    3: "IOS:IG2:RDVAC",
+    4: "IOS:BIAS:RDVOL",
+    5: "IOS:SSRFS:RDFP",
+    6: "IOS:IG1:RDVAC",
+    7: "MCIS:BIAS0:RDVOL",
+    8: "MCIS:BIAS0:RDCUR",
+    9: "MCIS:IG1:RDVAC",
+    10: "IOS:MB:MASSOVERQ2",
+    11: "IOS:MB:RDCUR",
+    12: "IOS:HALLMB:RDFIELD",
   };
-  let response = await fetch(url, options);
+
+  const options = {
+    method: "GET",
+  };
+  let response = await fetch(
+    rooturl + Object.values(PVDict).join("+"),
+    options
+  );
   return await response.text();
 }
 
 // data for our graph
 async function getGraphData() {
-  const url = 'https://beta.hla.triumf.ca/jaya-isac/IOS:FC6:SCALECUR';
+  const url = "https://beta.hla.triumf.ca/jaya-isac/IOS:FC6:SCALECUR";
   const options = {
-    method: 'GET'
+    method: "GET",
   };
   let response = await fetch(url, options);
   return await response.text();
@@ -75,7 +95,7 @@ setInterval(async () => {
 }, 5000);
 
 // Direction variables, for internal use
-app.get('/direction', async function (req, res) {
+app.get("/direction", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(laserDirectionVariables));
     let data = parse_xml(xmlObject);
@@ -87,19 +107,20 @@ app.get('/direction', async function (req, res) {
 });
 
 // MAIN route
-app.get('/Dashboard', (req, res) => {
-  res.sendFile(path.resolve('../TRIUMF-frontend/index.html'));
+app.get("/Dashboard", (req, res) => {
+  res.sendFile(path.resolve("../TRIUMF-frontend/index.html"));
 });
 
-app.get('/twitter', (req, res) => {
+app.get("/twitter", (req, res) => {
   try {
     res.json(twitterData);
   } catch (error) {
-    console.log('twitter broke');
+    console.log("twitter broke");
   }
 });
 
-app.get('/OLIS', async function (req, res) {
+// PVs used for our table
+app.get("/OLIS", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(olisVariables));
     let data = parse_xml(xmlObject);
@@ -113,7 +134,7 @@ app.get('/OLIS', async function (req, res) {
 });
 
 // Returns data for our graph,
-app.get('/ChartData', async function (req, res) {
+app.get("/ChartData", async function (req, res) {
   try {
     const xmlObject = JSON.parse(convert.xml2json(graph_data));
     let data = parse_xml(xmlObject);
@@ -124,6 +145,7 @@ app.get('/ChartData', async function (req, res) {
   }
 });
 
+// Initiate Application
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
