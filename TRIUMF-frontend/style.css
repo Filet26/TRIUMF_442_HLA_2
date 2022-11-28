@@ -13,8 +13,7 @@
   color: black;
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans';
-
+  font-family: "Open Sans";
 }
 
 body {
@@ -55,7 +54,7 @@ footer {
   max-height: 5%;
   background-color: #007bdff9;
   align-items: center;
-  margin-top: -0.5%
+  margin-top: -0.5%;
 }
 
 footer p {
@@ -73,8 +72,8 @@ footer p {
 }
 
 header {
-  height: 5%;
-  max-height: 5%;
+  height: 4%;
+  max-height: 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +83,7 @@ header {
 /* nav bar */
 
 .navText {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 header p {
@@ -94,6 +93,13 @@ header p {
 
 header h2 {
   color: white;
+  font-size: 1.4rem;
+}
+
+/* TRIUMF LOGO */
+img.logo {
+  height: auto;
+  width: 10%;
 }
 
 table {
@@ -105,11 +111,6 @@ table {
 
 #twitterWidget {
   overflow: hidden;
-}
-/* RIUMF LOGO */
-img.logo {
-  height: auto;
-  width: 15%;
 }
 
 /* VOLTAGE GRAPH */
@@ -157,7 +158,6 @@ img.logo {
   border-radius: 1rem;
   border: 5px solid #f5f5f5;
 }
-
 
 th {
   background: #fff;
@@ -210,7 +210,7 @@ canvas {
   body {
     flex-direction: column;
     width: 99vw;
-    overflow-y:scroll;
+    overflow-y: scroll;
   }
   section {
     flex-direction: column;
@@ -262,7 +262,7 @@ canvas {
   img.logo {
     width: 100%;
   }
-  .chartContainer{
+  .chartContainer {
     display: none;
   }
 
@@ -300,14 +300,11 @@ canvas {
   animation: blinker 1s infinite;
 }
 
-
-
 /* Graph Data Invisible Div */
 
 #graph_data {
   display: none;
 }
-
 
 @keyframes animate1 {
   0% {
