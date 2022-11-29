@@ -3,7 +3,6 @@ import fetch from "node-fetch";
 import convert from "xml-js";
 import cors from "cors";
 import { parse_xml, parse_xml_list } from "./parse.js";
-import { getUserTweets } from "./twitter.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -32,7 +31,6 @@ async function getAllData() {
   graph_data = await getGraphData();
   laserDirectionVariables = await getLaserDirectionVariables();
   olisVariables = await getOlisVariables();
-  twitterData = await getUserTweets();
 }
 
 // GET request to jaya microservice, returns data in XML format
@@ -111,14 +109,6 @@ app.get("/direction", async function (req, res) {
 // MAIN route
 app.get("/Dashboard", (req, res) => {
   res.sendFile(path.resolve("../TRIUMF-frontend/index.html"));
-});
-
-app.get("/twitter", (req, res) => {
-  try {
-    res.json(twitterData);
-  } catch (error) {
-    console.log("twitter broke");
-  }
 });
 
 // PVs used for our table

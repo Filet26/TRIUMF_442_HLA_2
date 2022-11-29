@@ -187,11 +187,6 @@ async function getLaserDirectionData() {
   return fetchData("http://127.0.0.1:8081/direction");
 }
 
-// TODO: Change links to deployed URL, eg. www.site.com/twitter
-async function getTwitterFromExpress() {
-  return fetchData("http://127.0.0.1:8081/twitter");
-}
-
 // TODO: Change links to deployed URL, eg. www.site.com/olis
 async function getLocalOlisData() {
   return fetchData("http://127.0.0.1:8081/OLIS");
@@ -323,7 +318,6 @@ setDiagramLabels();
 updateGraphData();
 updateSecondColumnTableValues();
 
-getTwitterFromExpress();
 setInterval(() => {
   updateSecondColumnTableValues();
   if (window.innerWidth > 600) {
