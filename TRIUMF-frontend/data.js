@@ -6,7 +6,7 @@ const readUnitsDict = {
     "IOS:IZR:RDCUR": "A",
     "IOS:IG2:RDVAC	": "Torr",
     // MWIS
-    "IOS:BIAS:RDCUR": "V",
+    "IOS:BIAS:RDVOL": "V",
     "IOS:SSRFS:RDFP": "W",
     "IOS:IG1:RDVAC": "Torr",
     // MCIS
