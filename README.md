@@ -27,32 +27,13 @@ https://www.triumf.ca/home/about-triumf
 * "serve-favicon": "^2.5.0",
 * "xml-js": "^1.6.11"
 
-### Installing
+### Installing and Executing program
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+https://www.notion.so/TRIUMF-OLIS-HLA-6cbb4439e7f141898376ff0ae1535dba 
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+BCIT Computing Fall 2022
 
 ## Version History
 
